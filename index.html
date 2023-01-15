@@ -6,12 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snippet</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="images/apple.png" />
   </head>
   <body>
-    <header><h1>Snippet</h1></header>
+    <header>
+      <div class="container">
+        <a class="logo"><img src="images/apple.png" /></a>
+        <h1 class="title">Snippets</h1>
+        <div class="header-buttons">
+          <button id="settings">Settings</button>
+          <button>About</button>
+        </div>
+      </div>
+    </header>
     <div class="timer-container">
       <div class="timer" id="timer">
-        <h2>00:00</h2>
+        <button id="Tech">Tech</button>
+        <button id="Study">Study</button>
+        <h2>20:00</h2>
+        <div class="buttons">
+          <button id="start" onclick="sound()">Start</button>
+          <button id="stop" onclick="sound()">Stop</button>
+          <button id="reset" onclick="sound()">Reset</button>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

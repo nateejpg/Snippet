@@ -4,10 +4,62 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 header {
-  background-color: red;
+  width: 100%;
+  background-color: rgb(186, 73, 73);
+}
+
+header .container {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.2px solid #000;
+}
+
+header .container .logo {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: left;
+}
+
+header .container .logo img {
+  width: 100px;
+  height: 100px;
+}
+
+header .container .title {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  font-size: 6rem;
+}
+
+header .container .header-buttons {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  text-align: right;
+}
+
+header .container button {
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+header .container button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .timer-container {
@@ -21,17 +73,41 @@ header {
 }
 
 .timer-container .timer {
-  position: relative;
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 400px;
   width: 500px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
 }
 
-.timer-container .timer {
-  font-size: 5rem;
+.timer-container .timer button {
+  background-color: transparent;
+  margin-top: 40px;
+  border: none;
   color: #fff;
+  font-size: 2rem;
+}
+
+.timer-container .timer h2 {
+  font-size: 8rem;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.timer-container .timer .buttons button {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  width: 120px;
+  height: 70px;
+  margin: 10px;
+  color: rgb(186, 73, 73);
+}
+
+.timer-container .timer .buttons button:hover {
+  cursor: pointer;
+  background-color: #e2dfd2;
 }
