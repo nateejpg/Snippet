@@ -5,6 +5,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(186, 73, 73);
 }
 
 header {
@@ -18,7 +19,7 @@ header .container {
   text-align: center;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.2px solid #000;
+  border-bottom: 0.2px solid #fff;
 }
 
 header .container .logo {
@@ -26,6 +27,7 @@ header .container .logo {
   width: 100%;
   display: flex;
   align-items: left;
+  cursor: pointer;
 }
 
 header .container .logo img {
@@ -36,6 +38,7 @@ header .container .logo img {
 header .container .title {
   position: relative;
   width: 100%;
+  cursor: pointer;
   margin: 0;
   color: #fff;
   font-size: 6rem;
@@ -54,31 +57,58 @@ header .container button {
   border-radius: 0.5rem;
   color: #fff;
   font-size: 1.5rem;
-  background-color: transparent;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 header .container button:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .timer-container {
-  height: 100vh;
   width: 100%;
+  height: 100%;
   background-color: rgb(186, 73, 73);
   display: flex;
   padding-top: 50px;
+  padding-bottom: 50px;
   justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
 .timer-container .timer {
   justify-content: center;
   align-items: center;
-  height: 400px;
-  width: 500px;
+  height: 550px;
+  width: 700px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
+}
+
+.timer-container .timer .section {
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+}
+
+.timer-container .timer .section .option-1 {
+  width: 100%;
+  width: 100%;
+  padding-bottom: 25px;
+  text-align: center;
+  border-radius: 1rem;
+  border: 0.2px solid #fff;
+}
+
+.timer-container .timer .section .option-2 {
+  width: 100%;
+  border-radius: 1rem;
+  border: 0.2px solid #fff;
+}
+
+.timer-container .timer .section button {
+  font-size: 2.5rem;
 }
 
 .timer-container .timer button {
@@ -90,10 +120,10 @@ header .container button:hover {
 }
 
 .timer-container .timer h2 {
-  font-size: 8rem;
+  font-size: 17rem;
   color: #fff;
   margin: 0;
-  padding: 20px;
+  padding: 5px;
 }
 
 .timer-container .timer .buttons button {
@@ -110,4 +140,35 @@ header .container button:hover {
 .timer-container .timer .buttons button:hover {
   cursor: pointer;
   background-color: #e2dfd2;
+}
+
+.footer {
+  width: 100%;
+  height: 100%;
+  border-top: 0.2px solid #fff;
+  padding-top: 10px;
+  text-align: center;
+  background-color: rgb(186, 73, 73);
+}
+
+.icon-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container img {
+  width: 100px;
+  height: 100px;
+  margin: 0px 10px;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.footer h3 {
+  margin: 10px;
+  font-size: 2rem;
+  color: #fff;
 }

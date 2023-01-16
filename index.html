@@ -12,17 +12,25 @@
     <header>
       <div class="container">
         <a class="logo"><img src="images/apple.png" /></a>
-        <h1 class="title">Snippets</h1>
+        <h1 class="title">Snippet</h1>
         <div class="header-buttons">
-          <button id="settings">Settings</button>
-          <button>About</button>
+          <button id="settings" onclick="sound()">Settings</button>
+          <button id="about" onclick="sound()">About</button>
+          <button id="report" onclick="sound()">Report</button>
+          <button id="report" onclick="sound()">Login</button>
         </div>
       </div>
     </header>
     <div class="timer-container">
       <div class="timer" id="timer">
-        <button id="Tech">Tech</button>
-        <button id="Study">Study</button>
+        <div class="section">
+          <div class="option-1" onclick="sound()">
+            <button id="Tech">Tech</button>
+          </div>
+          <div class="option-2" onclick="sound()">
+            <button id="Study">Study</button>
+          </div>
+        </div>
         <h2>20:00</h2>
         <div class="buttons">
           <button id="start" onclick="sound()">Start</button>
@@ -30,6 +38,20 @@
           <button id="reset" onclick="sound()">Reset</button>
         </div>
       </div>
+    </div>
+    <div class="footer">
+      <div class="icon-container">
+        <a href="https://twitter.com/NathanAbreuu11"
+          ><img src="images/twitter.png"
+        /></a>
+        <a href="https://github.com/NathanAbreu1"
+          ><img src="images/giticon.png"
+        /></a>
+        <a href="https://www.linkedin.com/feed/"
+          ><img src="images/linkedin.png"
+        /></a>
+      </div>
+      <h3>Designed and Developed by Natejpg</h3>
     </div>
     <script src="script.js"></script>
   </body>
