@@ -89,29 +89,26 @@ header .container button:hover {
 .timer-container .timer .section {
   display: flex;
   text-align: center;
+  justify-content: space-around;
   cursor: pointer;
 }
 
-.timer-container .timer .section .option-1 {
-  width: 100%;
-  width: 100%;
-  padding-bottom: 25px;
-  text-align: center;
-  border-radius: 1rem;
-  border: 0.2px solid #fff;
-}
-
-.timer-container .timer .section .option-2 {
-  width: 100%;
-  border-radius: 1rem;
-  border: 0.2px solid #fff;
-}
-
 .timer-container .timer .section button {
+  width: 500px;
+  height: 100px;
   font-size: 2.5rem;
+  border-radius: 1rem;
+  color: #ffff;
+  background-color: transparent;
+  border: 0.2px solid #fff;
 }
 
-.timer-container .timer button {
+.timer-container .timer .section button:hover {
+  color: #000;
+  background-color: #e2dfd2;
+}
+
+.timer-container .timer .section .timer-container .timer button {
   background-color: transparent;
   margin-top: 40px;
   border: none;
@@ -119,7 +116,7 @@ header .container button:hover {
   font-size: 2rem;
 }
 
-.timer-container .timer h2 {
+.timer-container .timer .timer-numbers {
   font-size: 17rem;
   color: #fff;
   margin: 0;

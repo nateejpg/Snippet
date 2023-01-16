@@ -14,28 +14,24 @@
         <a class="logo"><img src="images/apple.png" /></a>
         <h1 class="title">Snippet</h1>
         <div class="header-buttons">
-          <button id="settings" onclick="sound()">Settings</button>
-          <button id="about" onclick="sound()">About</button>
-          <button id="report" onclick="sound()">Report</button>
-          <button id="report" onclick="sound()">Login</button>
+          <button id="settings" onclick="sound_button()">Settings</button>
+          <button id="about" onclick="sound_button()">About</button>
+          <button id="report" onclick="sound_button()">Report</button>
+          <button id="report" onclick="sound_button()">Login</button>
         </div>
       </div>
     </header>
     <div class="timer-container">
       <div class="timer" id="timer">
         <div class="section">
-          <div class="option-1" onclick="sound()">
-            <button id="Tech">Tech</button>
-          </div>
-          <div class="option-2" onclick="sound()">
-            <button id="Study">Study</button>
-          </div>
+          <button onclick="sound()" id="Tech">Tech</button>
+          <button onclick="sound()" id="Study">Study</button>
         </div>
-        <h2>20:00</h2>
+        <h2 class="timer-numbers">20:00</h2>
         <div class="buttons">
-          <button id="start" onclick="sound()">Start</button>
-          <button id="stop" onclick="sound()">Stop</button>
-          <button id="reset" onclick="sound()">Reset</button>
+          <button id="start" onclick="sound_button(), start()">Start</button>
+          <button id="stop" onclick="sound_button(), stop()">Stop</button>
+          <button id="reset" onclick="sound_button(), reset()">Reset</button>
         </div>
       </div>
     </div>
