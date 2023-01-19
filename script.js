@@ -56,7 +56,24 @@ function stop(){
 
 function reset(){
 
-  clearInterval();
+  clearInterval(interval);
 
   start();   
+}
+
+function toggle_about(){
+
+  const about = document.querySelector(".about-container");
+
+  about.classList.toggle('active');
+
+}
+
+function toggle_login(){
+
+  const login = document.querySelector(".login-container");
+
+  login.classList.toggle("active");
+
+
 }

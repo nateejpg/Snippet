@@ -63,9 +63,12 @@ header .container button {
 
 header .container button:hover {
   cursor: pointer;
+  background-color: #e2dfd2;
+  color: #000;
 }
 
 .timer-container {
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: rgb(186, 73, 73);
@@ -101,6 +104,7 @@ header .container button:hover {
   color: #ffff;
   background-color: transparent;
   border: 0.2px solid #fff;
+  cursor: pointer;
 }
 
 .timer-container .timer .section button:hover {
@@ -168,4 +172,65 @@ header .container button:hover {
   margin: 10px;
   font-size: 2rem;
   color: #fff;
+}
+
+.about {
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.about .about-container {
+  position: relative;
+  text-align: center;
+  transition: 0.7s;
+  width: 50rem;
+  height: 50rem;
+  background-color: #fff;
+  z-index: 1000;
+  border-radius: 1rem;
+  left: -100%;
+  padding: 25px;
+}
+
+.about .about-container.active {
+  transition: 0.7s;
+  left: 0;
+}
+
+.about .about-container h2 {
+  font-size: 5rem;
+}
+
+.about .about-container p {
+  font-size: 3rem;
+}
+
+.login {
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.login .login-container {
+  position: relative;
+  background-color: #fff;
+  z-index: 1000;
+  transition: 0.7s;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 1rem;
+  right: -100%;
+}
+
+.login .login-container.active {
+  right: 0;
 }
