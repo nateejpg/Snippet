@@ -14,9 +14,9 @@
         <a class="logo"><img src="images/apple.png" /></a>
         <h1 class="title">Snippet</h1>
         <div class="header-buttons">
-          <button onclick="sound_button()">Settings</button>
+          <button onclick="sound_button(), toggle_settings()">Settings</button>
           <button onclick="sound_button(), toggle_about()">About</button>
-          <button onclick="sound_button()">Report</button>
+          <button onclick="sound_button(), toggle_reports()">Report</button>
           <button onclick="sound_button(), toggle_login()">Login</button>
         </div>
       </div>
@@ -29,14 +29,48 @@
           Snippet is a technique developed by me with the purpose to make you do
           stuff without the usual pain that people feel when they're studying.
           This method is backed up by a lot of scientific research on the field.
+          it's been tested with people with ADHD and autism and has already been
+          tested with multiple people, just pace yourself and enjoy the time
+          spent.
         </p>
       </div>
     </section>
 
     <section class="login">
       <div class="login-container">
-        <input type="text" />Enter your text test
+        <h2>Login</h2>
+        <div class="contactBx">
+          <input
+            type="text"
+            name=""
+            class="email"
+            id="email"
+            placeholder="Email Adress"
+          />
+          <input
+            type="password"
+            name=""
+            class="password"
+            placeholder="Password"
+            id="password"
+          />
+          <input
+            type="button"
+            name=""
+            value="login"
+            class="submit"
+            onclick="validate()"
+          />
+        </div>
       </div>
+    </section>
+
+    <section class="settings">
+      <div class="settings-container"></div>
+    </section>
+
+    <section class="reports">
+      <div class="reports-container"></div>
     </section>
 
     <section class="timer-container">

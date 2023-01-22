@@ -43,7 +43,7 @@ function start(){
 
 function display(){
 
-  var duration = 20*60;
+  var duration = 25*60;
   var display = document.querySelector(".timer-numbers");
 
 }
@@ -74,6 +74,41 @@ function toggle_login(){
   const login = document.querySelector(".login-container");
 
   login.classList.toggle("active");
+
+
+}
+
+function toggle_settings(){
+
+  const settings = document.querySelector(".settings-container");
+
+  settings.classList.toggle("active");
+}
+
+function toggle_reports(){
+
+  const reports = document.querySelector(".reports-container");
+
+  reports.classList.toggle("active");
+}
+
+function validate(){
+
+  const email = "nathan11.abreu@gmail.com";
+  const password = "abc123";
+  const enteremail = document.getElementById("email").value;
+  const enterpassword = document.getElementById("password").value;
+
+  if(enteremail == email && enterpassword == password){
+
+    alert("You've logged in succesfully");
+    return false;
+
+  }else{
+
+    alert("Something went wrong, try again");
+
+  }
 
 
 }
