@@ -10,55 +10,86 @@ function sound_over(){
   snd_2.play();
 }
 
-function timer(duration, display){
+function toggle_settings(){
 
-  var timer = duration, minutes, seconds;
+  const settings = document.querySelector(".settings-container");
 
-  interval = setInterval( () => {
-
-    minutes = parseInt(timer/ 60, 10);
-    seconds = parseInt(timer % 60, 10);
-
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    display.textContent = minutes + ":" + seconds;
-
-    if(--timer < 0){
-      timer = duration;
-      sound_over();
-    }
-
-  }, 1000);
+  settings.classList.toggle("active");
 }
 
-function start(){
 
-  var duration = 20*60;
-  var display1 = document.querySelector(".timer-numbers");
 
-  timer(duration, display1);
+function toggle_report(){
 
+  const report = document.querySelector(".report-container");
+
+  report.classList.toggle("active");
 }
 
-function display(){
 
-  var duration = 25*60;
-  var display = document.querySelector(".timer-numbers");
+var time_in_minutes = 0.1;
+var current_time = Date.parse(new Date());
+var deadline = new Date(current_time + time_in_minutes*60*1000);
 
-}
+function time_remaining(endtime){
 
-function stop(){
-
-  clearInterval(interval);
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor ( (t/1000) % 60);
+  var minutes = Math.floor ( (t/1000/60) % 60);
+  var hours = Math.floor ( (t/(1000*60*60)% 24));
+  var days = Math.floor (t/(1000*60*60*24));
+  return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds': seconds};
 
 }
 
 function reset(){
 
-  clearInterval(interval);
+  clearInterval(timeinterval);
+  start();
+}
 
-  start();   
+var timeinterval;
+
+function run_clock(id, endtime){
+
+  var clock = document.getElementById("clock");
+
+    function update_clock(){
+      var t = time_remaining(endtime);
+      clock.innerHTML = +t.minutes+':'+t.seconds;
+      if(t.total<=0){ 
+        sound_over();
+        clearInterval(timeinterval); }
+    }
+    update_clock();
+    timeinterval = setInterval(update_clock, 1000);
+}
+
+var paused = false;
+var timer_left;
+
+function pause_clock(){
+  if(!paused){
+    paused = true;
+    clearInterval(timeinterval);
+    timer_left = time_remaining(deadline).total;
+  }
+}
+
+function resume_clock(){
+  if(paused){
+    paused = false;
+
+    deadline = new Date(Date.parse(new Date())+timer_left);
+
+    run_clock('clockdiv', deadline);
+  }
+}
+
+function start(){
+
+run_clock('clockdiv', deadline);
+
 }
 
 function toggle_about(){
@@ -74,22 +105,6 @@ function toggle_login(){
   const login = document.querySelector(".login-container");
 
   login.classList.toggle("active");
-
-
-}
-
-function toggle_settings(){
-
-  const settings = document.querySelector(".settings-container");
-
-  settings.classList.toggle("active");
-}
-
-function toggle_reports(){
-
-  const reports = document.querySelector(".reports-container");
-
-  reports.classList.toggle("active");
 }
 
 function validate(){

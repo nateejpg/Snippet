@@ -16,7 +16,7 @@
         <div class="header-buttons">
           <button onclick="sound_button(), toggle_settings()">Settings</button>
           <button onclick="sound_button(), toggle_about()">About</button>
-          <button onclick="sound_button(), toggle_reports()">Report</button>
+          <button onclick="sound_button(), toggle_report()">Report</button>
           <button onclick="sound_button(), toggle_login()">Login</button>
         </div>
       </div>
@@ -69,21 +69,26 @@
       <div class="settings-container"></div>
     </section>
 
-    <section class="reports">
-      <div class="reports-container"></div>
+    <section class="report">
+      <div class="report-container"></div>
     </section>
 
     <section class="timer-container">
       <div class="timer" id="timer">
         <div class="section">
           <button onclick="sound_button()" id="Tech">Tech</button>
-          <button onclick="sound_button()" id="Study">Study</button>
+          <button onclick="sound_button()" id="Study">Others</button>
         </div>
-        <h2 class="timer-numbers">20:00</h2>
+        <h2 class="clock" id="clock">25:00</h2>
         <div class="buttons">
           <button id="start" onclick="sound_button(), start()">Start</button>
-          <button id="stop" onclick="sound_button(), stop()">Stop</button>
+          <button id="stop" onclick="sound_button(), pause_clock() ">
+            Stop
+          </button>
           <button id="reset" onclick="sound_button(), reset()">Reset</button>
+          <button id="reset" onclick="sound_button(), resume_clock()">
+            Resume
+          </button>
         </div>
       </div>
     </section>
