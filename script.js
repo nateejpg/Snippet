@@ -6,7 +6,7 @@ function sound_button(){
 }
 
 function sound_over(){
-  const snd_2 = new Audio("newaudio.mp3");
+  const snd_2 = new Audio("beep-beep.mp3");
   snd_2.play();
 }
 
@@ -17,8 +17,6 @@ function toggle_settings(){
   settings.classList.toggle("active");
 }
 
-
-
 function toggle_report(){
 
   const report = document.querySelector(".report-container");
@@ -26,8 +24,7 @@ function toggle_report(){
   report.classList.toggle("active");
 }
 
-
-var time_in_minutes = 0.1;
+var time_in_minutes = 25;
 var current_time = Date.parse(new Date());
 var deadline = new Date(current_time + time_in_minutes*60*1000);
 
@@ -42,13 +39,12 @@ function time_remaining(endtime){
 
 }
 
-function reset(){
+function reset_clock(){
 
-  clearInterval(timeinterval);
-  start();
+  window.location.reload();
 }
 
-var timeinterval;
+let timeinterval;
 
 function run_clock(id, endtime){
 
@@ -65,7 +61,6 @@ function run_clock(id, endtime){
     timeinterval = setInterval(update_clock, 1000);
 }
 
-var paused = false;
 var timer_left;
 
 function pause_clock(){
@@ -86,9 +81,9 @@ function resume_clock(){
   }
 }
 
-function start(){
+function start_clock(){
 
-run_clock('clockdiv', deadline);
+  run_clock('clockdiv', deadline);
 
 }
 

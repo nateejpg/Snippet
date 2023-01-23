@@ -81,13 +81,17 @@
         </div>
         <h2 class="clock" id="clock">25:00</h2>
         <div class="buttons">
-          <button id="start" onclick="sound_button(), start()">Start</button>
+          <button id="start" onclick="sound_button(), start_clock()">
+            Start
+          </button>
           <button id="stop" onclick="sound_button(), pause_clock() ">
             Stop
           </button>
-          <button id="reset" onclick="sound_button(), reset()">Reset</button>
           <button id="reset" onclick="sound_button(), resume_clock()">
             Resume
+          </button>
+          <button id="reset" onclick="sound_button(), reset_clock()">
+            Reset
           </button>
         </div>
       </div>
