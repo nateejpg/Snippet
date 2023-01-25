@@ -1,3 +1,6 @@
+:root {
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -103,7 +106,7 @@ header .container button:hover {
 .timer-container .timer .section button {
   width: 500px;
   height: 100px;
-  font-size: 2.5rem;
+  font-size: 4rem;
   border-radius: 1rem;
   color: #ffff;
   background-color: transparent;
@@ -215,7 +218,7 @@ header .container button:hover {
   font-weight: 400;
 }
 
-.login {
+.form {
   position: absolute;
   width: 100%;
   height: 75%;
@@ -225,7 +228,7 @@ header .container button:hover {
   text-align: center;
 }
 
-.login .login-container {
+.form .form-container {
   position: relative;
   justify-content: center;
   background-color: #fff;
@@ -238,41 +241,69 @@ header .container button:hover {
   top: -200%;
 }
 
-.login .login-container.active {
+.form .form-container.active {
   top: 0;
 }
 
-.login-container h2 {
+.form-container h2 {
   font-size: 5rem;
-  padding-top: 150px;
+  padding-top: 100px;
   color: #000;
 }
 
-.login-container .contactBx {
+.form-container h1 {
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 20px 0px;
+  text-align: left;
+}
+
+.form-container .contactBx {
   position: relative;
-  margin: 50px 100px;
+  margin: 25px 100px;
   display: grid;
   width: 75%;
   height: 200px;
 }
 
-.login-container .contactBx input .password {
+.form-container .contactBx input[type="password"] {
   border: none;
-  margin: 10px;
+  width: 100%;
+  height: 50px;
   border-bottom: 1px solid #000;
 }
-.login-container .contactBx input .email {
+.form-container .contactBx input[type="text"] {
   border: none;
-  margin: 10px;
+  width: 100%;
+  height: 50px;
   border-bottom: 1px solid #000;
 }
 
-.contactBx .submit {
+.contactBx input[type="button"] {
   border-radius: 1rem;
+  width: 100%;
+  height: 50px;
+  margin: 25px 0px;
+  background-color: #32de84;
+  cursor: pointer;
 }
 
-.contactBx .submit:hover {
-  background-color: #e2dfd2;
+.contactBx input[type="button"]:hover {
+  background-color: #50c878;
+}
+
+.form-container .help button {
+  color: #007fff;
+  border: none;
+  font-size: 1.5rem;
+  margin: 150px 100px;
+  transition: 0.5s;
+  background-color: transparent;
+}
+
+.form-container .help button:hover {
+  color: #00308f;
+  border-bottom: 1px #00308f solid;
   cursor: pointer;
 }
 
@@ -301,7 +332,7 @@ header .container button:hover {
   left: 0;
 }
 
-.report {
+.tips {
   position: absolute;
   width: 100%;
   height: 75%;
@@ -311,7 +342,7 @@ header .container button:hover {
   align-items: center;
 }
 
-.report .report-container {
+.tips .tips-container {
   position: relative;
   text-align: center;
   z-index: 1000;
@@ -323,6 +354,22 @@ header .container button:hover {
   top: -200%;
 }
 
-.report .report-container.active {
+.tips-container h2 {
+  font-size: 5rem;
+  color: #000;
+  margin-top: 50px;
+}
+
+.tips-container ul {
+  list-style: none;
+  text-align: left;
+}
+
+.tips-container ul li {
+  font-size: 2.5rem;
+  margin: 30px;
+}
+
+.tips .tips-container.active {
   top: 0;
 }

@@ -16,8 +16,8 @@
         <div class="header-buttons">
           <button onclick="sound_button(), toggle_settings()">Settings</button>
           <button onclick="sound_button(), toggle_about()">About</button>
-          <button onclick="sound_button(), toggle_report()">Report</button>
-          <button onclick="sound_button(), toggle_login()">Login</button>
+          <button onclick="sound_button(), toggle_tips()">Tips</button>
+          <button onclick="sound_button(), toggle_form()">Login</button>
         </div>
       </div>
     </header>
@@ -36,31 +36,36 @@
       </div>
     </section>
 
-    <section class="login">
-      <div class="login-container">
-        <h2>Login</h2>
+    <section id="form" class="form">
+      <div class="form-container">
+        <h2 id="title-form">Login</h2>
         <div class="contactBx">
+          <h1>Email</h1>
           <input
             type="text"
-            name=""
             class="email"
             id="email"
-            placeholder="Email Adress"
+            placeholder="Enter your email Adress  "
           />
+          <h1>Password</h1>
           <input
             type="password"
             name=""
             class="password"
-            placeholder="Password"
+            placeholder="Enter your password"
             id="password"
           />
           <input
             type="button"
             name=""
-            value="login"
+            value="Enter"
             class="submit"
             onclick="validate()"
           />
+        </div>
+        <div class="help">
+          <button onclick="change()">Sign-in</button>
+          <button>Forgot Password?</button>
         </div>
       </div>
     </section>
@@ -69,15 +74,32 @@
       <div class="settings-container"></div>
     </section>
 
-    <section class="report">
-      <div class="report-container"></div>
+    <section class="tips">
+      <div class="tips-container">
+        <h2>Tips</h2>
+        <ul>
+          <li>Choose a task to accomplish during the period.</li>
+          <li>
+            Set a timer not too long, and focus solemly on that period to get
+            your target goal done.
+          </li>
+          <li>
+            Dont feel overwhealmed, things will eventually work if you follow
+            the path and be faithful to the timer.
+          </li>
+          <li>
+            Turn off your phone if necessary and all of its notifications.
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="timer-container">
       <div class="timer" id="timer">
         <div class="section">
-          <button onclick="sound_button()" id="Tech">Tech</button>
-          <button onclick="sound_button()" id="Study">Others</button>
+          <button onclick="sound_button(), twenty()">25</button>
+          <button onclick="sound_button(), checkvalue()">60</button>
+          <button onclick="sound_button(), hundred_twenty()">120</button>
         </div>
         <h2 class="clock" id="clock">25:00</h2>
         <div class="buttons">
@@ -96,6 +118,7 @@
         </div>
       </div>
     </section>
+
     <section class="footer">
       <div class="icon-container">
         <a href="https://twitter.com/NathanAbreuu11"

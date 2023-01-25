@@ -1,30 +1,8 @@
 
-function sound_button(){
-  const snd = new Audio("sound.wav");
-
-  snd.play();
-}
-
-function sound_over(){
-  const snd_2 = new Audio("beep-beep.mp3");
-  snd_2.play();
-}
-
-function toggle_settings(){
-
-  const settings = document.querySelector(".settings-container");
-
-  settings.classList.toggle("active");
-}
-
-function toggle_report(){
-
-  const report = document.querySelector(".report-container");
-
-  report.classList.toggle("active");
-}
-
-var time_in_minutes = 25;
+var timer_left;
+var timeinterval;
+var paused;
+let time_in_minutes = 9;
 var current_time = Date.parse(new Date());
 var deadline = new Date(current_time + time_in_minutes*60*1000);
 
@@ -35,16 +13,10 @@ function time_remaining(endtime){
   var minutes = Math.floor ( (t/1000/60) % 60);
   var hours = Math.floor ( (t/(1000*60*60)% 24));
   var days = Math.floor (t/(1000*60*60*24));
+
   return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds': seconds};
 
 }
-
-function reset_clock(){
-
-  window.location.reload();
-}
-
-let timeinterval;
 
 function run_clock(id, endtime){
 
@@ -52,16 +24,32 @@ function run_clock(id, endtime){
 
     function update_clock(){
       var t = time_remaining(endtime);
+
       clock.innerHTML = +t.minutes+':'+t.seconds;
+      
+      if(t.minutes < 10 && t.seconds < 10){
+
+        clock.innerHTML = "0" + t.minutes + ":" + "0" + t.seconds;
+
+      }else if(t.minutes < 10){
+
+        clock.innerHTML = "0" + t.minutes + ":" + t.seconds;
+
+      }else if(t.seconds < 10){
+
+        clock.innerHTML = t.minutes + ":" + "0" + t.seconds;
+
+      }
+
       if(t.total<=0){ 
         sound_over();
         clearInterval(timeinterval); }
     }
+
     update_clock();
     timeinterval = setInterval(update_clock, 1000);
-}
 
-var timer_left;
+}
 
 function pause_clock(){
   if(!paused){
@@ -82,9 +70,40 @@ function resume_clock(){
 }
 
 function start_clock(){
-
+  
   run_clock('clockdiv', deadline);
 
+}
+
+function reset_clock(){
+
+  window.location.reload();
+
+}
+
+function sound_button(){
+  const snd = new Audio("sound.wav");
+
+  snd.play();
+}
+
+function sound_over(){
+  const snd_2 = new Audio("beep-beep.mp3");
+  snd_2.play();
+}
+
+function toggle_settings(){
+
+  const settings = document.querySelector(".settings-container");
+
+  settings.classList.toggle("active");
+}
+
+function toggle_tips(){
+
+  const tips = document.querySelector(".tips-container");
+
+  tips.classList.toggle("active");
 }
 
 function toggle_about(){
@@ -95,11 +114,11 @@ function toggle_about(){
 
 }
 
-function toggle_login(){
+function toggle_form(){
 
-  const login = document.querySelector(".login-container");
+  const form = document.querySelector(".form-container");
 
-  login.classList.toggle("active");
+  form.classList.toggle("active");
 }
 
 function validate(){
@@ -120,5 +139,23 @@ function validate(){
 
   }
 
+}
+
+function change(){
+
+  const change_login = document.getElementById("title-form");
+  
+  change_login.innerHTML = "Sign-In";
+
+}
+
+function checkvalue(){
+
+  console.log(" the value of the timer is: "+time_in_minutes).value;
+}
+
+function twenty(){
+
+  time_in_minutes = 25;
 
 }
