@@ -14,10 +14,10 @@
         <a class="logo"><img src="images/apple.png" /></a>
         <h1 class="title">Snippet</h1>
         <div class="header-buttons">
-          <button onclick="sound_button(), toggle_settings()">Settings</button>
           <button onclick="sound_button(), toggle_about()">About</button>
           <button onclick="sound_button(), toggle_tips()">Tips</button>
-          <button onclick="sound_button(), toggle_form()">Login</button>
+          <button onclick="sound_button(), toggle_login()">Login</button>
+          <button onclick="sound_button(), toggle_sign()">Sign-in</button>
         </div>
       </div>
     </header>
@@ -36,9 +36,9 @@
       </div>
     </section>
 
-    <section id="form" class="form">
-      <div class="form-container">
-        <h2 id="title-form">Login</h2>
+    <section id="login" class="login">
+      <div class="login-container">
+        <h2>Login</h2>
         <div class="contactBx">
           <h1>Email</h1>
           <input
@@ -64,14 +64,20 @@
           />
         </div>
         <div class="help">
-          <button onclick="change()">Sign-in</button>
+          <button onclick="toggle_sign(), toggle_login()">Sign-in</button>
           <button>Forgot Password?</button>
         </div>
       </div>
     </section>
 
-    <section class="settings">
-      <div class="settings-container"></div>
+    <section class="sign">
+      <div class="sign-container">
+        <h2>Sign-in</h2>
+        <h1>Email</h1>
+        <input type="text" name="" placeholder="Enter your email Adress" />
+        <h1>Password</h1>
+        <input type="password" name="" placeholder="Enter your password" />
+      </div>
     </section>
 
     <section class="tips">
@@ -80,12 +86,11 @@
         <ul>
           <li>Choose a task to accomplish during the period.</li>
           <li>
-            Set a timer not too long, and focus solemly on that period to get
-            your target goal done.
+            Its strongly recommended by the author to set a timer of 20 minutes,
+            because it is not much time, and also a very sweet spot to work.
           </li>
           <li>
-            Dont feel overwhealmed, things will eventually work if you follow
-            the path and be faithful to the timer.
+            Dont feel overwhealmed, focus solemly on getting your goal done.
           </li>
           <li>
             Turn off your phone if necessary and all of its notifications.
@@ -97,11 +102,12 @@
     <section class="timer-container">
       <div class="timer" id="timer">
         <div class="section">
-          <button onclick="sound_button(), twenty()">25</button>
-          <button onclick="sound_button(), checkvalue()">60</button>
-          <button onclick="sound_button(), hundred_twenty()">120</button>
+          <button onclick="sound_button(), dark_theme()" id="theme">
+            Dark
+          </button>
+          <button onclick="sound_button(), vanilla_theme()">Vanilla</button>
         </div>
-        <h2 class="clock" id="clock">25:00</h2>
+        <h2 class="clock" id="clock">20:00</h2>
         <div class="buttons">
           <button id="start" onclick="sound_button(), start_clock()">
             Start

@@ -1,4 +1,25 @@
 :root {
+  --standard-color: rgb(186, 73, 73);
+  --first-color: #fff;
+  --second-color: #000;
+  --third-color: rgba(255, 255, 255, 0.1);
+  --fourth-color: #e2e2e2;
+}
+
+.vanilla-theme {
+  --standard-color: rgb(186, 73, 73);
+  --first-color: #fff;
+  --second-color: #000;
+  --third-color: rgba(255, 255, 255, 0.1);
+  --fourth-color: #e2e2e2;
+}
+
+.dark-theme {
+  --standard-color: #000;
+  --first-color: #fff;
+  --second-color: #000;
+  --third-color: rgba(255, 255, 255, 0.1);
+  --fourth-color: #fff;
 }
 
 * {
@@ -10,13 +31,13 @@
 
 body {
   max-height: 100vh;
-  background-color: rgb(186, 73, 73);
+  background-color: var(--standard-color);
 }
 
 header {
   position: relative;
   width: 100%;
-  background-color: rgb(186, 73, 73);
+  background-color: var(--standard-color);
 }
 
 header .container {
@@ -25,7 +46,7 @@ header .container {
   text-align: center;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.2px solid #fff;
+  border-bottom: 0.2px solid var(--first-color);
 }
 
 header .container .logo {
@@ -37,8 +58,14 @@ header .container .logo {
 }
 
 header .container .logo img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
+  transition: 0.5s;
+}
+
+header .container .logo img:hover {
+  width: 110px;
+  height: 110px;
 }
 
 header .container .title {
@@ -46,7 +73,7 @@ header .container .title {
   width: 100%;
   cursor: pointer;
   margin: 0;
-  color: #fff;
+  color: var(--first-color);
   font-size: 6rem;
 }
 
@@ -61,16 +88,16 @@ header .container .header-buttons {
 header .container button {
   border: none;
   border-radius: 0.5rem;
-  color: #fff;
+  color: var(--first-color);
   width: 100px;
   font-size: 1.5rem;
   margin: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--third-color);
 }
 
 header .container button:hover {
   cursor: pointer;
-  background-color: #e2dfd2;
+  background-color: var(--fourth-color);
   color: #000;
 }
 
@@ -78,7 +105,7 @@ header .container button:hover {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: rgb(186, 73, 73);
+  background-color: var(--standard-color);
   display: flex;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -90,9 +117,9 @@ header .container button:hover {
 .timer-container .timer {
   justify-content: center;
   align-items: center;
+  background-color: var(--third-color);
   height: 550px;
   width: 700px;
-  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
 }
 
@@ -104,59 +131,59 @@ header .container button:hover {
 }
 
 .timer-container .timer .section button {
-  width: 500px;
+  width: 100%;
   height: 100px;
-  font-size: 4rem;
+  font-size: 5rem;
   border-radius: 1rem;
-  color: #ffff;
+  color: var(--first-color);
   background-color: transparent;
-  border: 0.2px solid #fff;
+  border: 0.2px solid var(--first-color);
   cursor: pointer;
 }
 
 .timer-container .timer .section button:hover {
-  color: #000;
-  background-color: #e2dfd2;
+  color: var(--second-color);
+  background-color: var(--fourth-color);
 }
 
 .timer-container .timer .section .timer-container .timer button {
   background-color: transparent;
   margin-top: 40px;
   border: none;
-  color: #fff;
+  color: var(--first-color);
   font-size: 2rem;
 }
 
 .timer-container .timer .clock {
   font-size: 17rem;
-  color: #fff;
+  color: var(--fourth-color);
   margin: 0;
   padding: 5px;
 }
 
 .timer-container .timer .buttons button {
-  background-color: #fff;
+  background-color: var(--first-color);
   border-radius: 0.5rem;
   font-size: 1.5rem;
   border: none;
   width: 120px;
   height: 70px;
   margin: 10px;
-  color: rgb(186, 73, 73);
+  color: var(--standard-color);
 }
 
 .timer-container .timer .buttons button:hover {
   cursor: pointer;
-  background-color: #e2dfd2;
+  background-color: var(--fourth-color);
 }
 
 .footer {
   width: 100%;
   height: 100%;
-  border-top: 0.2px solid #fff;
+  border-top: 0.2px solid var(--fourth-color);
   padding-top: 10px;
   text-align: center;
-  background-color: rgb(186, 73, 73);
+  background-color: var(--standard-color);
 }
 
 .icon-container {
@@ -178,7 +205,7 @@ header .container button:hover {
 .footer h3 {
   margin: 10px;
   font-size: 2rem;
-  color: #fff;
+  color: var(--first-color);
 }
 
 .about {
@@ -197,7 +224,7 @@ header .container button:hover {
   transition: 0.7s;
   width: 50rem;
   height: 50rem;
-  background-color: #fff;
+  background-color: var(--first-color);
   z-index: 1000;
   border-radius: 1rem;
   left: -100%;
@@ -218,7 +245,7 @@ header .container button:hover {
   font-weight: 400;
 }
 
-.form {
+.sign {
   position: absolute;
   width: 100%;
   height: 75%;
@@ -228,10 +255,37 @@ header .container button:hover {
   text-align: center;
 }
 
-.form .form-container {
+.sign .sign-container {
   position: relative;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--first-color);
+  text-align: center;
+  transition: 0.7s;
+  z-index: 1000;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 1rem;
+  left: -100%;
+}
+
+.sign-container.active {
+  left: 0;
+}
+
+.login {
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.login .login-container {
+  position: relative;
+  justify-content: center;
+  background-color: var(--first-color);
   text-align: center;
   transition: 0.7s;
   z-index: 1000;
@@ -241,24 +295,24 @@ header .container button:hover {
   top: -200%;
 }
 
-.form .form-container.active {
+.login .login-container.active {
   top: 0;
 }
 
-.form-container h2 {
+.login-container h2 {
   font-size: 5rem;
   padding-top: 100px;
-  color: #000;
+  color: var(--second-color);
 }
 
-.form-container h1 {
+.login-container h1 {
   font-size: 1.5rem;
   width: 100%;
   margin: 20px 0px;
   text-align: left;
 }
 
-.form-container .contactBx {
+.login-container .contactBx {
   position: relative;
   margin: 25px 100px;
   display: grid;
@@ -266,17 +320,17 @@ header .container button:hover {
   height: 200px;
 }
 
-.form-container .contactBx input[type="password"] {
+.login-container .contactBx input[type="password"] {
   border: none;
   width: 100%;
   height: 50px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--second-color);
 }
-.form-container .contactBx input[type="text"] {
+.login-container .contactBx input[type="text"] {
   border: none;
   width: 100%;
   height: 50px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--second-color);
 }
 
 .contactBx input[type="button"] {
@@ -292,7 +346,7 @@ header .container button:hover {
   background-color: #50c878;
 }
 
-.form-container .help button {
+.login-container .help button {
   color: #007fff;
   border: none;
   font-size: 1.5rem;
@@ -301,35 +355,10 @@ header .container button:hover {
   background-color: transparent;
 }
 
-.form-container .help button:hover {
+.login-container .help button:hover {
   color: #00308f;
   border-bottom: 1px #00308f solid;
   cursor: pointer;
-}
-
-.settings {
-  position: absolute;
-  width: 100%;
-  height: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.settings .settings-container {
-  position: relative;
-  width: 50rem;
-  height: 50rem;
-  z-index: 1000;
-  text-align: center;
-  border-radius: 1rem;
-  background-color: #fff;
-  transition: 0.7s;
-  left: -100%;
-}
-
-.settings .settings-container.active {
-  left: 0;
 }
 
 .tips {
@@ -350,18 +379,18 @@ header .container button:hover {
   height: 50rem;
   border-radius: 1rem;
   transition: 0.7s;
-  background-color: #fff;
+  background-color: var(--first-color);
   top: -200%;
 }
 
 .tips-container h2 {
   font-size: 5rem;
-  color: #000;
+  color: var(--second-color);
   margin-top: 50px;
 }
 
 .tips-container ul {
-  list-style: none;
+  margin-left: 10px;
   text-align: left;
 }
 

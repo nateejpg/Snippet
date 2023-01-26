@@ -2,9 +2,10 @@
 var timer_left;
 var timeinterval;
 var paused;
-let time_in_minutes = 9;
+let time_in_minutes = 20;
 var current_time = Date.parse(new Date());
 var deadline = new Date(current_time + time_in_minutes*60*1000);
+let click_count = 0;
 
 function time_remaining(endtime){
 
@@ -43,7 +44,8 @@ function run_clock(id, endtime){
 
       if(t.total<=0){ 
         sound_over();
-        clearInterval(timeinterval); }
+        clearInterval(timeinterval);
+      }
     }
 
     update_clock();
@@ -92,11 +94,11 @@ function sound_over(){
   snd_2.play();
 }
 
-function toggle_settings(){
+function toggle_sign(){
 
-  const settings = document.querySelector(".settings-container");
+  const sign = document.querySelector(".sign-container");
 
-  settings.classList.toggle("active");
+  sign.classList.toggle("active");
 }
 
 function toggle_tips(){
@@ -114,11 +116,11 @@ function toggle_about(){
 
 }
 
-function toggle_form(){
+function toggle_login(){
 
-  const form = document.querySelector(".form-container");
+  const login = document.querySelector(".login-container");
 
-  form.classList.toggle("active");
+  login.classList.toggle("active");
 }
 
 function validate(){
@@ -138,24 +140,16 @@ function validate(){
     alert("Something went wrong, try again");
 
   }
+}
+
+function dark_theme(){
+
+document.body.classList.add("dark-theme")
 
 }
 
-function change(){
+function vanilla_theme(){
 
-  const change_login = document.getElementById("title-form");
-  
-  change_login.innerHTML = "Sign-In";
-
-}
-
-function checkvalue(){
-
-  console.log(" the value of the timer is: "+time_in_minutes).value;
-}
-
-function twenty(){
-
-  time_in_minutes = 25;
-
+  document.body.classList.remove("dark-theme");
+  document.body.classList.add("vanilla-theme");
 }
