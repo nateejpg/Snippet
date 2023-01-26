@@ -153,3 +153,8 @@ function vanilla_theme(){
   document.body.classList.remove("dark-theme");
   document.body.classList.add("vanilla-theme");
 }
+
+function sign(){
+
+  alert("You've signed in successfully, now enter your credentials on the login form");
+}
