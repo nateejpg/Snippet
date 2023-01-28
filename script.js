@@ -2,7 +2,7 @@
 var timer_left;
 var timeinterval;
 var paused;
-let time_in_minutes = 20;
+let time_in_minutes = 60;
 var current_time = Date.parse(new Date());
 var deadline = new Date(current_time + time_in_minutes*60*1000);
 let click_count = 0;
@@ -123,6 +123,13 @@ function toggle_login(){
   login.classList.toggle("active");
 }
 
+function toggle_settings(){
+
+  const settings = document.querySelector(".settings-container");
+
+  settings.classList.toggle("active");
+}
+
 function validate(){
 
   const email = "nathan11.abreu@gmail.com";
@@ -157,4 +164,12 @@ function vanilla_theme(){
 function sign(){
 
   alert("You've signed in successfully, now enter your credentials on the login form");
+}
+
+function toggle_menu(){
+  
+  const toggle = document.querySelector(".menuToggle")
+
+  toggle.classList.toggle("active");
+
 }
