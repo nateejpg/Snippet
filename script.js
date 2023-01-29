@@ -168,8 +168,8 @@ function sign(){
 
 function toggle_menu(){
   
-  const toggle = document.querySelector(".menuToggle")
-
+  const toggle = document.querySelector(".menuToggle");
   toggle.classList.toggle("active");
+  
 
 }
