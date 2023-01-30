@@ -1,11 +1,11 @@
+const starting = document.getElementById("start");
 
-var timer_left;
+function start_clock(){
+
+var time_in_minutes = 60;
 var timeinterval;
-var paused;
-let time_in_minutes = 60;
 var current_time = Date.parse(new Date());
 var deadline = new Date(current_time + time_in_minutes*60*1000);
-let click_count = 0;
 
 function time_remaining(endtime){
 
@@ -13,7 +13,8 @@ function time_remaining(endtime){
   var seconds = Math.floor ( (t/1000) % 60);
   var minutes = Math.floor ( (t/1000/60) % 60);
   var hours = Math.floor ( (t/(1000*60*60)% 24));
-  var days = Math.floor (t/(1000*60*60*24));
+  var days = Math.floor (t/(1000*60*60*24) );
+
 
   return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds': seconds};
 
@@ -21,7 +22,7 @@ function time_remaining(endtime){
 
 function run_clock(id, endtime){
 
-  var clock = document.getElementById("clock");
+  var clock = document.getElementById(id);
 
     function update_clock(){
       var t = time_remaining(endtime);
@@ -51,7 +52,14 @@ function run_clock(id, endtime){
     update_clock();
     timeinterval = setInterval(update_clock, 1000);
 
+  }
+
+  run_clock("clock", deadline);
+
 }
+
+var paused = false;
+var timer_left;
 
 function pause_clock(){
   if(!paused){
@@ -67,18 +75,13 @@ function resume_clock(){
 
     deadline = new Date(Date.parse(new Date())+timer_left);
 
-    run_clock('clockdiv', deadline);
+    run_clock('clock', deadline);
   }
-}
-
-function start_clock(){
-  
-  run_clock('clockdiv', deadline);
-
 }
 
 function reset_clock(){
 
+  clearInterval(timeinterval);
   window.location.reload();
 
 }
