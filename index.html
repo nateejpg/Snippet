@@ -92,7 +92,14 @@
 
     <section class="settings">
       <div class="settings-container">
-        <h2>Hello World</h2>
+        <div class="imgBx">
+          <img src="images/reddot.png" onclick="toggle_settings()" />
+        </div>
+        <h2>Choose Your Timer</h2>
+        <div class="content">
+          <input type="text" id="myinput" value="20" onchange="change()" />
+          <input type="button" id="checkvalue" placeholder="Submit" />
+        </div>
       </div>
     </section>
 

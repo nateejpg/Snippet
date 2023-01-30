@@ -3,10 +3,17 @@ const starting = document.getElementById("start");
 function start_clock(){
 
   let time_in_minutes = 20;
+
+  var change = () =>{
+    time_in_minutes = document.getElementById("myinput").value;
+  }
+
+  change();
+
   let current_time = Date.parse(new Date());
   let deadline = new Date(current_time + time_in_minutes*60*1000);
 
-function time_remaining(endtime){
+  function time_remaining(endtime){
 
   let t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor ( (t/1000) % 60);
@@ -17,9 +24,9 @@ function time_remaining(endtime){
 
   return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds': seconds};
 
-}
+  }
 
-function run_clock(id, endtime){
+   function run_clock(id, endtime){
 
   var clock = document.getElementById(id);
 
@@ -58,7 +65,6 @@ function run_clock(id, endtime){
 }
 
 var timeinterval;
-
 var paused = false;
 var timer_left;
 
@@ -72,6 +78,8 @@ function pause_clock(){
 }
 
 function resume_clock(){
+
+  time_remaining(endtime);
 
   if(paused){
     paused = false;

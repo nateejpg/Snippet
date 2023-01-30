@@ -373,6 +373,18 @@ header .container .menuToggle {
   left: 0;
 }
 
+.settings-container .content {
+  width: 100%;
+  height: 25rem;
+  display: block;
+  background-color: red;
+}
+
+.settings-container .content input[type="button"] {
+  width: 100px;
+  height: 50px;
+}
+
 .login {
   position: absolute;
   width: 100%;
