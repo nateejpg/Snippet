@@ -2,14 +2,13 @@ const starting = document.getElementById("start");
 
 function start_clock(){
 
-var time_in_minutes = 60;
-var timeinterval;
-var current_time = Date.parse(new Date());
-var deadline = new Date(current_time + time_in_minutes*60*1000);
+  let time_in_minutes = 20;
+  let current_time = Date.parse(new Date());
+  let deadline = new Date(current_time + time_in_minutes*60*1000);
 
 function time_remaining(endtime){
 
-  var t = Date.parse(endtime) - Date.parse(new Date());
+  let t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor ( (t/1000) % 60);
   var minutes = Math.floor ( (t/1000/60) % 60);
   var hours = Math.floor ( (t/(1000*60*60)% 24));
@@ -58,10 +57,13 @@ function run_clock(id, endtime){
 
 }
 
+var timeinterval;
+
 var paused = false;
 var timer_left;
 
 function pause_clock(){
+
   if(!paused){
     paused = true;
     clearInterval(timeinterval);
@@ -70,6 +72,7 @@ function pause_clock(){
 }
 
 function resume_clock(){
+
   if(paused){
     paused = false;
 
@@ -81,7 +84,6 @@ function resume_clock(){
 
 function reset_clock(){
 
-  clearInterval(timeinterval);
   window.location.reload();
 
 }
