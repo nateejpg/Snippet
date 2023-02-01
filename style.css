@@ -617,6 +617,10 @@ header .container .menuToggle {
     left: 0;
   }
 
+  .imgBx {
+    padding: 25px;
+  }
+
   .sign .sign-container h2 {
     font-size: 3rem;
   }
@@ -709,7 +713,6 @@ header .container .menuToggle {
 
   .about .about-container h2 {
     font-size: 3rem;
-    padding: 25px;
   }
 
   .about .about-container p {
