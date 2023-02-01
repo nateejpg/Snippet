@@ -673,7 +673,7 @@ header .container .menuToggle {
   }
 
   .tips .tips-container ul li {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 
   .timer-container .timer .clock {
@@ -708,7 +708,8 @@ header .container .menuToggle {
   }
 
   .about .about-container h2 {
-    font-size: 4rem;
+    font-size: 3rem;
+    padding: 25px;
   }
 
   .about .about-container p {
@@ -791,6 +792,7 @@ header .container .menuToggle {
 
   .mobile-navigation.active {
     display: flex;
+    height: 90vh;
   }
 
   .mobile-navigation .container {
