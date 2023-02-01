@@ -10,6 +10,7 @@ function start_clock(){
 
   change();
 
+
   let current_time = Date.parse(new Date());
   let deadline = new Date(current_time + time_in_minutes*60*1000);
 
@@ -52,6 +53,8 @@ function start_clock(){
       if(t.total<=0){ 
         sound_over();
         clearInterval(timeinterval);
+        clock.innerHTML = "00" + ":" + "00"
+        return;
       }
     }
 
@@ -79,8 +82,6 @@ function pause_clock(){
 
 function resume_clock(){
 
-  time_remaining(endtime);
-
   if(paused){
     paused = false;
 
@@ -88,6 +89,7 @@ function resume_clock(){
 
     run_clock('clock', deadline);
   }
+
 }
 
 function reset_clock(){
@@ -180,9 +182,10 @@ function sign(){
 }
 
 function toggle_menu(){
-  
+
   const toggle = document.querySelector(".menuToggle");
+  const navigation = document.querySelector(".mobile-navigation");
+  navigation.classList.toggle("active");
   toggle.classList.toggle("active");
-  
 
 }

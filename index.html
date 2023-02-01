@@ -25,6 +25,9 @@
 
     <section class="about">
       <div class="about-container" id="abc">
+        <div class="imgBx">
+          <img src="images/reddot.png" onclick="toggle_about()" />
+        </div>
         <h2>What is Snippet?</h2>
         <p>
           Snippet is a technique developed by me with the purpose to make you do
@@ -74,6 +77,15 @@
       </div>
     </section>
 
+    <section class="mobile-navigation" id="toggle">
+      <div class="container">
+        <button onclick="sound_button(), toggle_login()">Login</button>
+        <button onclick="sound_button(), toggle_settings()">Settings</button>
+        <button onclick="sound_button(), toggle_about()">About</button>
+        <button onclick="sound_button(), toggle_tips()">Tips</button>
+      </div>
+    </section>
+
     <section class="sign">
       <div class="sign-container">
         <div class="imgBx">
@@ -98,41 +110,57 @@
         <h2>Choose Your Timer</h2>
         <div class="content">
           <input type="text" id="myinput" value="20" onchange="change()" />
-          <input type="button" id="checkvalue" placeholder="Submit" />
         </div>
+        <input
+          type="button"
+          id="checkvalue"
+          value="Enter"
+          onclick="toggle_settings()"
+        />
       </div>
     </section>
 
     <section class="about">
       <div class="about-container" id="abc">
+        <div class="imgBx">
+          <img src="images/reddot.png" onclick="toggle_settings()" />
+        </div>
         <h2>What is Snippet?</h2>
-        <p>
-          Snippet is a technique developed by me with the purpose to make you do
-          stuff without the usual pain that people feel when they're studying.
-          This method is backed up by a lot of scientific research on the field.
-          it's been tested with people with ADHD and autism and has already been
-          tested with multiple people, just pace yourself and enjoy the time
-          spent.
-        </p>
+        <div class="content">
+          <p>
+            Snippet is a technique developed by me with the purpose to make you
+            do stuff without the usual pain that people feel when they're
+            studying. This method is backed up by a lot of scientific research
+            on the field. it's been tested with people with ADHD and autism and
+            has already been tested with multiple people, just pace yourself and
+            enjoy the time spent.
+          </p>
+        </div>
       </div>
     </section>
 
     <section class="tips">
       <div class="tips-container">
+        <div class="imgBx">
+          <img src="images/reddot.png" onclick="toggle_tips()" />
+        </div>
         <h2>Tips</h2>
-        <ul>
-          <li>Choose a task to accomplish during the period.</li>
-          <li>
-            Its strongly recommended by the author to set a timer of 20 minutes,
-            because it is not much time, and also a very sweet spot to work.
-          </li>
-          <li>
-            Dont feel overwhealmed, focus solemly on getting your goal done.
-          </li>
-          <li>
-            Turn off your phone if necessary and all of its notifications.
-          </li>
-        </ul>
+        <div class="content">
+          <ul>
+            <li>Choose a task to accomplish during the period.</li>
+            <li>
+              Its strongly recommended by the author to set a timer of 20
+              minutes, because it is not much time, and also a very sweet spot
+              to work.
+            </li>
+            <li>
+              Dont feel overwhealmed, focus solemly on getting your goal done.
+            </li>
+            <li>
+              Turn off your phone if necessary and all of its notifications.
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 

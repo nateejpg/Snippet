@@ -230,7 +230,7 @@ header .container .menuToggle {
   height: 75%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
 }
 
@@ -245,7 +245,7 @@ header .container .menuToggle {
   z-index: 1000;
   border-radius: 1rem;
   left: -300%;
-  padding: 100px 50px;
+  padding: 0px;
 }
 
 .about .about-container.active {
@@ -254,12 +254,13 @@ header .container .menuToggle {
 
 .about .about-container h2 {
   font-size: 5rem;
-  margin-bottom: 25px;
+  padding: 50px 0px;
 }
 
 .about .about-container p {
   font-size: 2.5rem;
   font-weight: 400;
+  padding: 0px 25px;
 }
 
 .sign {
@@ -373,16 +374,42 @@ header .container .menuToggle {
   left: 0;
 }
 
-.settings-container .content {
-  width: 100%;
-  height: 25rem;
-  display: block;
-  background-color: red;
+.settings .settings-container h2 {
+  font-size: 4rem;
+  padding-top: 25px;
 }
 
-.settings-container .content input[type="button"] {
-  width: 100px;
+.settings-container .content {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.settings-container input[type="button"] {
+  width: 150px;
   height: 50px;
+  background-color: #32de84;
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+.settings-container input[type="button"]:hover {
+  background-color: #50c878;
+}
+
+.settings-container .content input[type="text"] {
+  width: 50%;
+  height: 50px;
+  text-align: center;
+  font-size: 3rem;
+  padding: 50px;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
 }
 
 .login {
@@ -484,6 +511,10 @@ header .container .menuToggle {
   align-items: center;
 }
 
+.mobile-navigation {
+  display: none;
+}
+
 .tips .tips-container {
   position: relative;
   text-align: center;
@@ -500,7 +531,7 @@ header .container .menuToggle {
 .tips-container h2 {
   font-size: 5rem;
   color: var(--second-color);
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .tips-container ul {
@@ -539,6 +570,42 @@ header .container .menuToggle {
     text-align: center;
   }
 
+  .login .login-container {
+    position: relative;
+    text-align: center;
+    transition: 0.7s;
+    background-color: var(--first-color);
+    margin-top: 60px;
+    width: 50rem;
+    height: 50rem;
+    z-index: 10000;
+    border-radius: 1rem;
+  }
+
+  .login .login-container.active {
+    z-index: 10000000;
+    border-radius: 0;
+  }
+
+  .login .login-container .contactBx {
+    position: relative;
+    margin: 25px 50px;
+    display: grid;
+    width: 75%;
+    height: 200px;
+  }
+
+  .login .login-container .help button {
+    font-size: 1rem;
+    margin: 150px 10px;
+  }
+
+  .login-container h2 {
+    font-size: 5rem;
+    color: var(--second-color);
+    padding-top: 25px;
+  }
+
   .sign {
     position: absolute;
     width: 100%;
@@ -547,36 +614,11 @@ header .container .menuToggle {
     align-items: center;
     justify-content: center;
     text-align: center;
+    left: 0;
   }
 
   .sign .sign-container h2 {
     font-size: 3rem;
-  }
-
-  .login .login-container {
-    margin-top: 60px;
-    transition: 0.7s;
-    z-index: 1000;
-    width: 50rem;
-    height: 100%;
-    border-radius: 1rem;
-  }
-
-  .login .login-container h2 {
-    font-size: 3rem;
-  }
-
-  .login-container .contactBx {
-    position: relative;
-    margin: 25px 50px;
-    display: grid;
-    width: 75%;
-    height: 200px;
-  }
-
-  .login-container .help button {
-    font-size: 1rem;
-    margin: 150px 10px;
   }
 
   .sign .sign-container {
@@ -585,9 +627,14 @@ header .container .menuToggle {
     transition: 0.7s;
     z-index: 1000;
     width: 50rem;
-    height: 100%;
+    height: 50rem;
     border-radius: 1rem;
-    top: 0;
+    left: -200%;
+  }
+
+  .sign .sign-container.active {
+    left: 0;
+    z-index: 100000000;
   }
 
   .sign-container .content {
@@ -599,16 +646,10 @@ header .container .menuToggle {
     padding-top: 100px;
   }
 
-  .about {
-    display: none;
-  }
-
-  .settings {
-    display: none;
-  }
-
-  .tips {
-    display: none;
+  .settings .settings-container.active {
+    left: 0;
+    z-index: 10000000;
+    border-radius: 0;
   }
 
   header .container .header-buttons {
@@ -623,6 +664,16 @@ header .container .menuToggle {
     font-size: 3rem;
     text-align: center;
     position: absolute;
+  }
+
+  .tips .tips-container.active {
+    top: 0;
+    border-radius: 0;
+    z-index: 10000000;
+  }
+
+  .tips .tips-container ul li {
+    font-size: 1.7rem;
   }
 
   .timer-container .timer .clock {
@@ -648,6 +699,21 @@ header .container .menuToggle {
     display: flex;
     background-color: red;
     padding-right: 10px;
+  }
+
+  .about .about-container.active {
+    left: 0;
+    border-radius: 0;
+    z-index: 10000000000;
+  }
+
+  .about .about-container h2 {
+    font-size: 4rem;
+  }
+
+  .about .about-container p {
+    font-size: 1.6rem;
+    font-weight: 400;
   }
 
   .timer-container .timer .buttons button {
@@ -687,22 +753,6 @@ header .container .menuToggle {
     height: 75px;
   }
 
-  .tips .tips-container ul li {
-    font-size: 0.8rem;
-  }
-
-  .about .about-container {
-    height: 30rem;
-  }
-
-  .about .about-container h2 {
-    font-size: 2rem;
-  }
-
-  .about .about-container p {
-    font-size: 1.5rem;
-  }
-
   .footer h3 {
     font-size: 1.2rem;
   }
@@ -718,12 +768,45 @@ header .container .menuToggle {
     background: url(images/menu.png);
   }
 
-  .container .menuToggle.active {
+  header .container .menuToggle.active {
     width: 35px;
     height: 35px;
     margin-right: 20px;
     background-repeat: no-repeat;
     background-position: center;
     background: url(images/close.png);
+  }
+
+  .mobile-navigation {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    margin-top: 15px;
+    z-index: 10000;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    display: none;
+  }
+
+  .mobile-navigation.active {
+    display: flex;
+  }
+
+  .mobile-navigation .container {
+    display: block;
+    width: 100%;
+    height: 150px;
+    padding-top: 125px;
+  }
+
+  .mobile-navigation .container button {
+    width: 100%;
+    font-size: 50px;
+    font-weight: 200px;
+    padding-top: 25px;
+    border: none;
+    background-color: transparent;
+    color: #111;
   }
 }
