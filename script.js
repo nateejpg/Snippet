@@ -32,7 +32,7 @@ function start_clock(){
   var clock = document.getElementById(id);
 
     function update_clock(){
-      var t = time_remaining(endtime);
+      let t = time_remaining(endtime);
 
       clock.innerHTML = +t.minutes+':'+t.seconds;
       
@@ -65,31 +65,30 @@ function start_clock(){
 
   run_clock("clock", deadline);
 
-}
+  var timeinterval;
+  var paused = false;
+  var timer_left;
 
-var timeinterval;
-var paused = false;
-var timer_left;
+  document.getElementById("stop").onclick = function pause_clock(){
+  
+    if(!paused){
+      paused = true;
+      clearInterval(timeinterval);
+      timer_left = time_remaining(deadline).total;
+    }
 
-function pause_clock(){
+  document.getElementById("resume").onclick = function resume_clock(){
 
-  if(!paused){
-    paused = true;
-    clearInterval(timeinterval);
-    timer_left = time_remaining(deadline).total;
+      if(paused){
+        paused = false;
+    
+        deadline = new Date(Date.parse(new Date())+timer_left);
+    
+       run_clock('clock', deadline);
+      }
+    
+    }
   }
-}
-
-function resume_clock(){
-
-  if(paused){
-    paused = false;
-
-    deadline = new Date(Date.parse(new Date())+timer_left);
-
-    run_clock('clock', deadline);
-  }
-
 }
 
 function reset_clock(){
