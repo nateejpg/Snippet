@@ -167,21 +167,17 @@
     <section class="timer-container">
       <div class="timer" id="timer">
         <div class="section">
-          <button onclick="sound_button(), dark_theme()" id="theme">
+          <button onclick=" sound_button(), dark_theme()" id="theme">
             Dark
           </button>
           <button onclick="sound_button(), vanilla_theme()">Vanilla</button>
         </div>
         <h2 class="clock" id="clock">20:00</h2>
         <div class="buttons">
-          <button id="start" onclick=" sound_button(), start_clock()">
-            Start
-          </button>
+          <button id="start">Start</button>
           <button id="stop">Stop</button>
           <button id="resume">Resume</button>
-          <button id="reset" onclick=" sound_button(),reset_clock()">
-            Reset
-          </button>
+          <button id="reset" onclick="reset_clock()">Reset</button>
         </div>
       </div>
     </section>

@@ -1,6 +1,8 @@
-const starting = document.getElementById("start");
+let flag = false;
 
-function start_clock(){
+document.getElementById("start").onclick = function start_clock(){
+
+  flag = true;
 
   let time_in_minutes = 20;
 
@@ -9,7 +11,6 @@ function start_clock(){
   }
 
   change();
-
 
   let current_time = Date.parse(new Date());
   let deadline = new Date(current_time + time_in_minutes*60*1000);
@@ -89,6 +90,14 @@ function start_clock(){
     
     }
   }
+
+  if(flag = false){
+
+  }else{
+  
+    document.getElementById("start").style.pointerEvents = "none";
+  
+  }
 }
 
 function reset_clock(){
@@ -102,6 +111,7 @@ function sound_button(){
 
   snd.play();
 }
+
 
 function sound_over(){
   const snd_2 = new Audio("beep-beep.mp3");
