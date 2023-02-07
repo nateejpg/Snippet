@@ -4,7 +4,7 @@ document.getElementById("start").onclick = function start_clock(){
 
   flag = true;
 
-  let time_in_minutes = 20;
+  let time_in_minutes = 25;
 
   var change = () =>{
     time_in_minutes = document.getElementById("myinput").value;
