@@ -164,6 +164,7 @@ header .container .menuToggle {
   color: var(--fourth-color);
   margin: 0;
   padding: 5px;
+  max-width: 100%;
 }
 
 .timer-container .timer .buttons {
@@ -260,7 +261,7 @@ header .container .menuToggle {
 .about .about-container p {
   font-size: 2.5rem;
   font-weight: 400;
-  padding: 0px 25px;
+  padding: 0px 50px;
 }
 
 .sign {
@@ -542,6 +543,10 @@ header .container .menuToggle {
 .tips-container ul li {
   font-size: 2.5rem;
   margin: 30px;
+}
+
+.tips-container li::marker {
+  font-size: 3rem;
 }
 
 .tips .tips-container.active {

@@ -2,6 +2,8 @@ let flag = false;
 
 document.getElementById("start").onclick = function start_clock(){
 
+  sound_button();
+
   flag = true;
 
   let time_in_minutes = 25;
@@ -53,10 +55,14 @@ document.getElementById("start").onclick = function start_clock(){
 
       if(t.total<=0){ 
         sound_over();
+        flag = false;
         clearInterval(timeinterval);
         clock.innerHTML = "00" + ":" + "00"
         return;
       }
+      if(flag = false){
+        document.getElementById("start").style.pointerEvents = "all";
+        }
     }
 
     update_clock();
@@ -71,6 +77,8 @@ document.getElementById("start").onclick = function start_clock(){
   var timer_left;
 
   document.getElementById("stop").onclick = function pause_clock(){
+
+    sound_button();
   
     if(!paused){
       paused = true;
@@ -79,6 +87,8 @@ document.getElementById("start").onclick = function start_clock(){
     }
 
   document.getElementById("resume").onclick = function resume_clock(){
+
+    sound_button();
 
       if(paused){
         paused = false;
@@ -91,12 +101,8 @@ document.getElementById("start").onclick = function start_clock(){
     }
   }
 
-  if(flag = false){
-
-  }else{
-  
+  if(flag = true){
     document.getElementById("start").style.pointerEvents = "none";
-  
   }
 }
 
