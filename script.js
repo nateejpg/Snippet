@@ -1,13 +1,11 @@
 let flag = false;
+let = start = document.getElementById("start");
 
-document.getElementById("start").onclick = function start_clock(){
+start.onclick = function start_clock(){
 
   sound_button();
-
   flag = true;
-
   let time_in_minutes = 25;
-
   var change = () =>{
     time_in_minutes = document.getElementById("myinput").value;
   }
@@ -18,7 +16,6 @@ document.getElementById("start").onclick = function start_clock(){
   let deadline = new Date(current_time + time_in_minutes*60*1000);
 
   function time_remaining(endtime){
-
   let t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor ( (t/1000) % 60);
   var minutes = Math.floor ( (t/1000/60) % 60);
@@ -53,16 +50,15 @@ document.getElementById("start").onclick = function start_clock(){
 
       }
 
-      if(t.total<=0){ 
-        sound_over();
-        flag = false;
-        clearInterval(timeinterval);
-        clock.innerHTML = "00" + ":" + "00"
-        return;
+      if(flag = true){
+        start.onclick = null;
       }
-      if(flag = false){
-        document.getElementById("start").style.pointerEvents = "all";
-        }
+
+      if(t.total<=0){ 
+          sound_over();
+          clearInterval(timeinterval);
+          clock.innerHTML = "00" + ":" + "00"
+      }
     }
 
     update_clock();
@@ -99,10 +95,6 @@ document.getElementById("start").onclick = function start_clock(){
       }
     
     }
-  }
-
-  if(flag = true){
-    document.getElementById("start").style.pointerEvents = "none";
   }
 }
 
