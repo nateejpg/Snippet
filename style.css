@@ -396,10 +396,12 @@ header .container .menuToggle {
   font-size: 1rem;
   border-radius: 1rem;
   border: none;
+  cursor: pointer;
 }
 
 .settings-container input[type="button"]:hover {
   background-color: #50c878;
+  cursor: pointer;
 }
 
 .settings-container .content input[type="text"] {
