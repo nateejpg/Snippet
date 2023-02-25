@@ -98,7 +98,7 @@ start.onclick = function start_clock(){
   }
 }
 
-function reset_clock(){
+document.getElementById("reset").onclick = function reset_clock(){
 
   window.location.reload();
 
