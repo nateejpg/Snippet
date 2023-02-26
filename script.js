@@ -15,7 +15,9 @@ check.onclick = function change () {
     clock.innerHTML = "0" + value.value + ":" + "00";
   }else if(value.value < 1){
     alert("Please, select a timer greater than 1 minute!");
+    flag = false;
     time_in_minutes = 20;
+    toggle_settings();
   }
 
   if(flag == true){
