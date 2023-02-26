@@ -1,16 +1,37 @@
 let flag = false;
 let = start = document.getElementById("start");
+let time_in_minutes = 20;
+let check = document.getElementById("checkvalue");
+
+check.onclick = function change () { 
+
+  let value = document.getElementById("myinput");
+  time_in_minutes = value.value;
+  flag = true;
+
+  if(value.value >= 10){
+    clock.innerHTML = value.value + ":" + "00";
+  }else if(value.value < 10 && value.value >= 1){
+    clock.innerHTML = "0" + value.value + ":" + "00";
+  }else if(value.value < 1){
+    alert("Please, select a timer greater than 1 minute!");
+    time_in_minutes = 20;
+  }
+
+  if(flag == true){
+  check.onclick = null;
+}
+
+  toggle_settings();
+}
+
 
 start.onclick = function start_clock(){
 
   sound_button();
   flag = true;
-  let time_in_minutes = 25;
-  var change = () =>{
-    time_in_minutes = document.getElementById("myinput").value;
-  }
+  let clock = document.getElementById("clock");
 
-  change();
 
   let current_time = Date.parse(new Date());
   let deadline = new Date(current_time + time_in_minutes*60*1000);
@@ -28,8 +49,6 @@ start.onclick = function start_clock(){
   }
 
    function run_clock(id, endtime){
-
-  var clock = document.getElementById(id);
 
     function update_clock(){
       let t = time_remaining(endtime);
