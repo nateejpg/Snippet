@@ -8,15 +8,23 @@ check.onclick = function change () {
   let value = document.getElementById("myinput");
   time_in_minutes = value.value;
 
-  if(value.value >= 10){
+  if(value.value >= 10 && value.value <= 60){
     clock.innerHTML = value.value + ":" + "00";
+    
   }else if(value.value < 10 && value.value >= 1){
     clock.innerHTML = "0" + value.value + ":" + "00";
+
   }else if(value.value < 1){
     alert("Please, select a timer greater than 1 minute!");
     flag = false;
     time_in_minutes = 20;
     toggle_settings();
+
+  }else if(value.value > 60){
+    alert("Please, select a timer less than an hour.")
+    toggle_settings();
+    flag = false;
+    time_in_minutes = 20;
   }
 
   toggle_settings();
