@@ -10,7 +10,7 @@ check.onclick = function change () {
 
   if(value.value >= 10 && value.value <= 60){
     clock.innerHTML = value.value + ":" + "00";
-    
+
   }else if(value.value < 10 && value.value >= 1){
     clock.innerHTML = "0" + value.value + ":" + "00";
 
@@ -19,12 +19,14 @@ check.onclick = function change () {
     flag = false;
     time_in_minutes = 20;
     toggle_settings();
+    clock.innerHTML = "20" + ":" + "00";
 
   }else if(value.value > 60){
     alert("Please, select a timer less than an hour.")
     toggle_settings();
     flag = false;
     time_in_minutes = 20;
+    clock.innerHTML = "20" + ":" + "00";
   }
 
   toggle_settings();
