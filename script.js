@@ -7,7 +7,6 @@ check.onclick = function change () {
 
   let value = document.getElementById("myinput");
   time_in_minutes = value.value;
-  flag = true;
 
   if(value.value >= 10){
     clock.innerHTML = value.value + ":" + "00";
@@ -20,10 +19,6 @@ check.onclick = function change () {
     toggle_settings();
   }
 
-  if(flag == true){
-  check.onclick = null;
-}
-
   toggle_settings();
 }
 
@@ -32,6 +27,10 @@ start.onclick = function start_clock(){
   sound_button();
   flag = true;
   let clock = document.getElementById("clock");
+
+  if(flag == true){
+    check.onclick = null;
+  }
 
 
   let current_time = Date.parse(new Date());
