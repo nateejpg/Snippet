@@ -342,10 +342,11 @@ header .container .menuToggle {
   background-color: #32de84;
   cursor: pointer;
   border-radius: 1rem;
+  border: none;
 }
 
 .sign-container .content input[type="submit"]:hover {
-  background-color: #50c878;
+  background-color: #03c03c;
 }
 
 .settings {
@@ -400,7 +401,7 @@ header .container .menuToggle {
 }
 
 .settings-container input[type="button"]:hover {
-  background-color: #50c878;
+  background-color: #03c03c;
   cursor: pointer;
 }
 
@@ -483,10 +484,11 @@ header .container .menuToggle {
   margin: 25px 0px;
   background-color: #32de84;
   cursor: pointer;
+  border: none;
 }
 
 .contactBx input[type="button"]:hover {
-  background-color: #50c878;
+  background-color: #03c03c;
 }
 
 .login-container .help button {
