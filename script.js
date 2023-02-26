@@ -25,7 +25,6 @@ check.onclick = function change () {
   toggle_settings();
 }
 
-
 start.onclick = function start_clock(){
 
   sound_button();
