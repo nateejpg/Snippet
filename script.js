@@ -29,6 +29,7 @@ check.onclick = function change () {
     clock.innerHTML = "20" + ":" + "00";
   }
 
+  sound_button();
   toggle_settings();
 }
 

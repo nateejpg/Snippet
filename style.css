@@ -260,7 +260,7 @@ header .container .menuToggle {
 
 .about .about-container p {
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 300;
   padding: 0px 50px;
 }
 
@@ -726,7 +726,7 @@ header .container .menuToggle {
 
   .about .about-container p {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 300;
   }
 
   .timer-container .timer .buttons button {
