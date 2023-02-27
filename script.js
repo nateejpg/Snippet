@@ -27,6 +27,12 @@ check.onclick = function change () {
     flag = false;
     time_in_minutes = 20;
     clock.innerHTML = "20" + ":" + "00";
+  }else{
+    alert("Insert a valid value!");
+    flag = false;
+    time_in_minutes = 20;
+    clock.innerHTML = "20" + ":" + "00";
+    toggle_settings();
   }
 
   sound_button();
