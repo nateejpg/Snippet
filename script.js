@@ -1,6 +1,6 @@
 let flag = false;
 let = start = document.getElementById("start");
-let time_in_minutes = 25;
+let time_in_minutes = 20;
 let check = document.getElementById("checkvalue");
 
 check.onclick = function change () { 
@@ -17,21 +17,21 @@ check.onclick = function change () {
   }else if(value.value < 1){
     alert("Please, select a timer greater than 1 minute!");
     flag = false;
-    time_in_minutes = 25;
+    time_in_minutes = 20;
     toggle_settings();
-    clock.innerHTML = "25" + ":" + "00";
+    clock.innerHTML = "20" + ":" + "00";
 
   }else if(value.value > 60){
     alert("Please, select a timer less than an hour.")
     toggle_settings();
     flag = false;
     time_in_minutes = 25;
-    clock.innerHTML = "25" + ":" + "00";
+    clock.innerHTML = "20" + ":" + "00";
   }else{
     alert("Insert a valid value!");
     flag = false;
     time_in_minutes = 25;
-    clock.innerHTML = "25" + ":" + "00";
+    clock.innerHTML = "20" + ":" + "00";
     toggle_settings();
   }
 
