@@ -1,5 +1,5 @@
 let flag = false;
-let = start = document.getElementById("start");
+let start = document.getElementById("start");
 let time_in_minutes = 20;
 let check = document.getElementById("checkvalue");
 
@@ -141,7 +141,8 @@ document.getElementById("reset").onclick = function reset_clock(){
 }
 
 function sound_button(){
-  const snd = new Audio("sound.wav");
+
+  var snd = new Audio("sound.wav");
 
   snd.play();
 }
@@ -188,24 +189,6 @@ function toggle_settings(){
   settings.classList.toggle("active");
 }
 
-function validate(){
-
-  const email = "nathan11.abreu@gmail.com";
-  const password = "abc123";
-  const enteremail = document.getElementById("email").value;
-  const enterpassword = document.getElementById("password").value;
-
-  if(enteremail == email && enterpassword == password){
-
-    alert("You've logged in succesfully");
-    return false;
-
-  }else{
-
-    alert("Something went wrong, try again");
-
-  }
-}
 
 function dark_theme(){
 
@@ -219,10 +202,6 @@ function vanilla_theme(){
   document.body.classList.add("vanilla-theme");
 }
 
-function sign(){
-
-  alert("You've signed in successfully, now enter your credentials on the login form");
-}
 
 function toggle_menu(){
 

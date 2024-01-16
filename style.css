@@ -41,6 +41,20 @@ header {
   background-color: var(--standard-color);
 }
 
+header .userName{
+  
+  color: #fff;
+  height: 100px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 header .container {
   display: flex;
   width: 100%;
@@ -52,9 +66,10 @@ header .container {
 
 header .container .logo {
   position: relative;
-  width: 100%;
   display: flex;
-  align-items: left;
+  align-items: center;
+  width: 100%;
+  justify-content: left;
   cursor: pointer;
 }
 
@@ -272,6 +287,7 @@ header .container .menuToggle {
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-direction: column;
 }
 
 .sign .sign-container {
@@ -306,7 +322,6 @@ header .container .menuToggle {
 }
 
 .sign-container h2 {
-  padding-top: 100px;
   font-size: 5rem;
 }
 
@@ -326,6 +341,14 @@ header .container .menuToggle {
   height: 50px;
   border: none;
   border-bottom: 1px solid var(--second-color);
+  outline: none;
+}
+.sign-container .content input[type="email"] {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid var(--second-color);
+  outline: none;
 }
 
 .sign-container .content input[type="password"] {
@@ -333,6 +356,8 @@ header .container .menuToggle {
   height: 50px;
   border: none;
   border-bottom: 1px solid var(--second-color);
+  outline: none;
+
 }
 
 .sign-container .content input[type="submit"] {
@@ -343,10 +368,14 @@ header .container .menuToggle {
   cursor: pointer;
   border-radius: 1rem;
   border: none;
+  outline: none;
+
 }
 
 .sign-container .content input[type="submit"]:hover {
   background-color: #03c03c;
+  outline: none;
+
 }
 
 .settings {
@@ -414,6 +443,8 @@ header .container .menuToggle {
   border: none;
   border-bottom: 1px solid #000;
   background-color: transparent;
+  outline: none;
+
 }
 
 .login {
@@ -469,11 +500,21 @@ header .container .menuToggle {
   width: 100%;
   height: 50px;
   border-bottom: 1px solid var(--second-color);
+  outline: none;
+
 }
 .login-container .contactBx input[type="text"] {
   border: none;
   width: 100%;
   height: 50px;
+  outline: none;
+  border-bottom: 1px solid var(--second-color);
+}
+.login-container .contactBx input[type="email"] {
+  border: none;
+  width: 100%;
+  height: 50px;
+  outline: none;
   border-bottom: 1px solid var(--second-color);
 }
 
@@ -545,8 +586,8 @@ header .container .menuToggle {
 }
 
 .tips-container ul li {
-  font-size: 2.5rem;
-  margin: 30px;
+  font-size: 2.4rem;
+  margin: 15px 30px;
 }
 
 .tips-container li::marker {
@@ -577,6 +618,10 @@ header .container .menuToggle {
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  header .userName{
+    display: none;
   }
 
   .login .login-container {
