@@ -287,7 +287,6 @@ header .container .menuToggle {
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-direction: column;
 }
 
 .sign .sign-container {
