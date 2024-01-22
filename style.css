@@ -671,9 +671,7 @@ header .container .menuToggle {
     z-index: 100000000;
     width: 50rem;
     height: 50rem;
-    border-top-left-radius: 0rem;
-    border-top-right-radius: 0rem;
-    border-bottom-left-radius: 0rem;
+    border-radius: 0;
 }
 
 .sign-container .content input[type="submit"]:hover {
