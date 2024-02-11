@@ -189,19 +189,50 @@ function toggle_settings(){
   settings.classList.toggle("active");
 }
 
-
-function dark_theme(){
-
-document.body.classList.add("dark-theme")
+function darkTheme(){
+  document.body.classList.add("dark-theme");
+  window.localStorage.setItem("theme", "dark-theme");
 
 }
 
-function vanilla_theme(){
+function vanillaTheme(){
 
   document.body.classList.remove("dark-theme");
-  document.body.classList.add("vanilla-theme");
+  window.localStorage.setItem("theme", "vanilla-theme");
+
 }
 
+const darkBtn = document.getElementById("dark");
+
+darkBtn.addEventListener("click", () => {
+
+  darkTheme();
+
+})
+
+const pomoBtn = document.getElementById("pomo"); 
+
+pomoBtn.addEventListener("click",() => {
+
+  vanillaTheme()
+
+})
+
+function selectTheme() {
+
+  const savedTheme = window.localStorage.getItem("theme");
+
+  console.log(savedTheme)
+
+  if(savedTheme === "dark-theme"){
+    darkTheme()
+  }else{
+    vanillaTheme()
+  }
+  
+}
+
+selectTheme();
 
 function toggle_menu(){
 
