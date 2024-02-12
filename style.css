@@ -549,6 +549,12 @@ header .container .menuToggle {
   cursor: pointer;
 }
 
+.sign-container .help button:hover {
+  color: #00308f;
+  border-bottom: 1px #00308f solid;
+  cursor: pointer;
+}
+
 .tips {
   position: absolute;
   width: 100%;

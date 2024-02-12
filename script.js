@@ -283,3 +283,15 @@ function toggle_menu(){
   toggle.classList.toggle("active");
 
 }
+
+function removeLocalStorage(){
+    window.localStorage.removeItem("theme");
+    window.localStorage.removeItem("valueInput");
+    window.location.reload();
+}
+
+
+document.getElementById("removeLocal").onclick = () => {
+
+  removeLocalStorage();
+}

@@ -11,7 +11,7 @@
   <body>
     <header>
       <div class="container">
-        <a class="logo"><img src="images/apple.png" /></a>
+        <a class="logo" id="removeLocal"><img src="images/apple.png" /></a>
         <h1 class="title">Snippet</h1>
         <div class="header-buttons">
           <button onclick="sound_button(), toggle_settings()">Settings</button>
@@ -60,14 +60,14 @@
             type="email"
             class="email"
             id="loginEmail"
-            placeholder="Enter your email Adress  "
+            placeholder="Enter your email:"
           />
           <h1>Password</h1>
           <input
             type="password"
             name=""
             class="password"
-            placeholder="Enter your password"
+            placeholder="Enter your password:"
             id="loginPassword"
           />
           <input
@@ -109,7 +109,7 @@
           <h1>Email</h1>
           <input
             type="email"
-            placeholder="Enter your email Adress:"
+            placeholder="Enter your email:"
             id="signEmail"
           />
           <h1>Password</h1>
@@ -285,8 +285,12 @@
             });
 
             alert(
-              `Hello ${user.email}, you've successfully created your account.`
+              `Hello ${username}, you've successfully created your account.`
             );
+
+            toggle_sign();
+            window.location.reload();
+
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -305,11 +309,14 @@
 
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
-            alert("You've successfully logged in!");
+
+            alert(`Hello ${email}, You've successfully logged in!`);
 
             // Signed in
             const user = userCredential.user;
             // ...
+
+            window.location.reload();
           })
 
           .catch((error) => {
