@@ -531,7 +531,7 @@ header .container .menuToggle {
   color: #007fff;
   border: none;
   font-size: 1.6rem;
-  margin: 180px 100px;
+  margin-top: 170px;
   transition: 0.5s;
   background-color: transparent;
 }
