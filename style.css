@@ -104,9 +104,9 @@ header .container button {
   border: none;
   border-radius: 0.5rem;
   color: var(--first-color);
-  width: 100px;
+  width: 100%;
   font-size: 1.5rem;
-  margin: 10px;
+  margin: 15px;
   background-color: var(--third-color);
 }
 
@@ -322,7 +322,7 @@ header .container .menuToggle {
 }
 
 .sign-container .content {
-  padding: 25px 100px;
+  padding: 0px 100px;
   width: 100%;
 }
 
@@ -661,7 +661,7 @@ header .container .menuToggle {
   }
 
   .login-container h2 {
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--second-color);
     padding-top: 25px;
   }

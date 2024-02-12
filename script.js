@@ -37,6 +37,7 @@ function htmlTag(){
     flag = false;
     value = 20;
     toggle_settings();
+    window.localStorage.setItem("valueInput", value)
     clock.innerHTML = "20" + ":" + "00";
 
   }else if(value > 60){
@@ -46,7 +47,6 @@ function htmlTag(){
     value = getValue;
     clock.innerHTML = "20" + ":" + "00";
   }else if( value !== NaN ){
-    toggle_settings();
     value = 20;
     clock.innerHTML = value + ":" + "00";
     window.localStorage.setItem("valueInput", value)
