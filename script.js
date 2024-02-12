@@ -1,53 +1,89 @@
 let flag = false;
-let start = document.getElementById("start");
-let time_in_minutes = 20;
-let check = document.getElementById("checkvalue");
 
-check.onclick = function change () { 
+function valueF(){
 
   let value = document.getElementById("myinput");
-  time_in_minutes = value.value;
 
-  if(value.value >= 10 && value.value <= 60){
-    clock.innerHTML = value.value + ":" + "00";
+  if(!value.value){
+    return value.value = "20"
+   
+    }else{
+    return value.value = window.localStorage.getItem("valueInput");
+  }
 
-  }else if(value.value < 10 && value.value >= 1){
-    clock.innerHTML = "0" + value.value + ":" + "00";
+}
 
-  }else if(value.value < 1){
+valueF();
+htmlTag();
+
+console.log(window.localStorage.getItem("valueInput"));
+
+function htmlTag(){
+
+  valueF()
+
+  let getValue = window.localStorage.getItem("valueInput")
+
+  let value = parseInt(getValue);
+
+  if(value >= 10 && value <= 60){
+    clock.innerHTML = value + ":" + "00";
+
+  }else if(value < 10 && value >= 1){
+    clock.innerHTML = "0" + value + ":" + "00";
+
+  }else if(value <= 1 && value != null){
     alert("Please, select a timer greater than 1 minute!");
     flag = false;
-    time_in_minutes = 20;
+    value = 20;
     toggle_settings();
     clock.innerHTML = "20" + ":" + "00";
 
-  }else if(value.value > 60){
+  }else if(value > 60){
     alert("Please, select a timer less than an hour.")
     toggle_settings();
     flag = false;
-    time_in_minutes = 20;
+    value = getValue;
     clock.innerHTML = "20" + ":" + "00";
-  }else{
-    alert("Insert a valid value!");
-    flag = false;
-    time_in_minutes = 20;
-    clock.innerHTML = "20" + ":" + "00";
-    toggle_settings();
+
   }
 
-  sound_button();
-  toggle_settings();
+  console.log("this value",value)
 }
 
-start.onclick = function start_clock(){
+function checkValue(){ 
+
+  let value = document.getElementById("myinput");
+
+  let time_in_minutes = value.value
+
+    window.localStorage.setItem("valueInput", time_in_minutes)
+
+
+
+}
+
+document.getElementById("checkvalue").onclick = () => {
+
+    sound_button();
+    checkValue();
+    toggle_settings();
+    htmlTag();
+}
+
+ document.getElementById("start").onclick = () => {
 
   sound_button();
   flag = true;
   let clock = document.getElementById("clock");
 
   if(flag == true){
-    check.onclick = null;
+    document.getElementById("checkvalue").onclick = null;
   }
+
+  let time_in_minutes;
+
+     time_in_minutes = parseInt(valueF());
 
 
   let current_time = Date.parse(new Date());
@@ -64,6 +100,8 @@ start.onclick = function start_clock(){
   return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds': seconds};
 
   }
+
+  console.log("test",parseInt(valueF()));
 
    function run_clock(id, endtime){
 
@@ -218,11 +256,10 @@ pomoBtn.addEventListener("click",() => {
 
 })
 
+// Function to call itself after Reload GetItem
 function selectTheme() {
 
   const savedTheme = window.localStorage.getItem("theme");
-
-  console.log(savedTheme)
 
   if(savedTheme === "dark-theme"){
     darkTheme()

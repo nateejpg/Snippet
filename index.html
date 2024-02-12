@@ -140,7 +140,7 @@
         </div>
         <h2>Choose Your Timer</h2>
         <div class="content">
-          <input type="text" id="myinput" value="20" onchange="change()" />
+          <input type="text" id="myinput" value="" onclick="sound_button" />
         </div>
         <input type="button" id="checkvalue" value="Enter" ; />
       </div>
@@ -200,10 +200,10 @@
     <section class="timer-container">
       <div class="timer" id="timer">
         <div class="section">
-          <button onclick=" sound_button(), selectTheme()" id="dark">
+          <button onclick=" sound_button()" id="dark">
             Dark
           </button>
-          <button onclick="sound_button(), selectTheme()" id="pomo">Pomo</button>
+          <button onclick="sound_button()" id="pomo">Pomo</button>
         </div>
         <h2 class="clock" id="clock">20:00</h2>
         <div class="buttons">
