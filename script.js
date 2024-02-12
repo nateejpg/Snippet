@@ -45,7 +45,11 @@ function htmlTag(){
     flag = false;
     value = getValue;
     clock.innerHTML = "20" + ":" + "00";
-
+  }else if( value !== NaN ){
+    toggle_settings();
+    value = 20;
+    clock.innerHTML = value + ":" + "00";
+    window.localStorage.setItem("valueInput", value)
   }
 
   console.log("this value",value)
