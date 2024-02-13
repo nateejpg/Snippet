@@ -44,8 +44,9 @@ function htmlTag(){
     alert("Please, select a timer less than an hour.")
     toggle_settings();
     flag = false;
-    value = getValue;
-    clock.innerHTML = "20" + ":" + "00";
+    value = 20
+    clock.innerHTML = value + ":" + "00";
+    window.localStorage.setItem("valueInput", value)
   }else if( value !== NaN ){
     value = 20;
     clock.innerHTML = value + ":" + "00";
