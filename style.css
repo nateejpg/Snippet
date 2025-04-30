@@ -527,7 +527,7 @@ header .container .menuToggle {
   background-color: #03c03c;
 }
 
-.login-container .help button {
+.login-container  button {
   color: #007fff;
   border: none;
   font-size: 1.6rem;
@@ -535,7 +535,7 @@ header .container .menuToggle {
   transition: 0.5s;
   background-color: transparent;
 }
- .sign-container .help button {
+ .sign-container  button {
   color: #007fff;
   border: none;
   font-size: 1.6rem;
@@ -543,13 +543,13 @@ header .container .menuToggle {
   background-color: transparent;
 }
 
-.login-container .help button:hover {
+.login-container button:hover {
   color: #00308f;
   border-bottom: 1px #00308f solid;
   cursor: pointer;
 }
 
-.sign-container .help button:hover {
+.sign-container button:hover {
   color: #00308f;
   border-bottom: 1px #00308f solid;
   cursor: pointer;
@@ -611,21 +611,19 @@ header .container .menuToggle {
 }
 
 @media (max-width: 992px) {
-  body {
-    max-width: 100%;
-    max-height: 100vh;
+
+  body{
+    height: 100%;
   }
 
   header {
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
   }
 
   .login {
     position: absolute;
     width: 100%;
-    height: 75%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -650,40 +648,77 @@ header .container .menuToggle {
 
   .login .login-container.active {
     z-index: 10000000;
+    padding: 0;
     border-radius: 0;
+    width: 100%;
+    margin: 0;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   .login .login-container .contactBx {
     position: relative;
-    margin: 25px 50px;
+    margin: 0px 50px;
+    gap: 13px;
     display: grid;
-    width: 75%;
     height: 200px;
   }
 
-  .login .login-container .help button {
-    font-size: 1.6rem;
-    margin: 150px 10px;
+  .login-container h1 {
+    margin: 10px 0px;
+}
+
+  .login .login-container button {
+    font-size: 1.3rem;
+    margin: 0;
   }
 
   .login-container h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--second-color);
-    padding-top: 25px;
+    padding: 0;
   }
 
-
-  .imgBx {
-    padding: 25px;
+  .imgBx{
+    padding: 0;
   }
+
+  .imgBx img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
 
 
   .sign .sign-container.active {
-    left: 0;
-    z-index: 100000000;
-    width: 50rem;
-    height: 50rem;
+    z-index: 10000000;
+    padding: 0;
     border-radius: 0;
+    width: 100%;
+    margin: 0;
+    height: 70vh;
+}
+
+.sign-container .content h1 {
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 10px 0;
+}
+
+
+.sign-container button {
+  font-size: 1.2rem;
+}
+
+
+.sign-container .content input[type="email"] {
+  height: 20px;
+}
+
+.sign-container .content input[type="password"] {
+  height: 20px;
 }
 
 .sign-container .content input[type="submit"]:hover {
@@ -696,24 +731,28 @@ header .container .menuToggle {
   }
 
   .sign .sign-container {
-    z-index: 10000;
-    margin-top: 60px;
+    position: relative;
+    text-align: center;
     transition: 0.7s;
-    z-index: 1000;
+    background-color: var(--first-color);
+    margin-top: 60px;
     width: 50rem;
     height: 50rem;
+    z-index: 10000;
     border-radius: 1rem;
-    left: -200%;
   }
 
   .sign-container .content {
-    width: 100%;
-    padding: 0px 50px;
+    position: relative;
+    gap: 10px;
+    display: grid;
+    margin: 0;
+    height: 200px;
   }
 
 
   .sign-container .content input[type="text"] {
-    height: 50px;
+    height: 20px;
     width: 100%;
     border: none;
     border-bottom: 1px solid var(--second-color);
@@ -723,17 +762,27 @@ header .container .menuToggle {
 .sign-container .content input[type="submit"]{
     border-radius: 1rem;
     width: 100%;
-    height: 50px;
-    margin: 25px 0px;
+    height: 30px; 
+    margin: 0px;
     background-color: #32de84;
     cursor: pointer;
     border: none;
+}
+
+.contactBx input[type="button"] {
+  border-radius: 1rem;
+  background-color: #32de84;
+  cursor: pointer;
+  border: none;
+  margin: 0;
 }
 
   .settings .settings-container.active {
     left: 0;
     z-index: 10000000;
     border-radius: 0;
+    margin: 0;
+    height: 70vh;
   }
 
   header .container .header-buttons {
@@ -751,33 +800,54 @@ header .container .menuToggle {
   }
 
   .tips{
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .login{
-    height: 100%;
-  }
 
   .sign{
-    height: 100%;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .settings{
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .settings .settings-container h2 {
+    font-size: 3rem;
   }
 
   .about{
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .tips .tips-container.active {
     top: 0;
     border-radius: 0;
     z-index: 10000000;
+    margin: 0;
+    gap: 0;
+    height: 70vh;
   }
 
+  .tips-container h2 {
+    font-size: 3rem;
+    color: var(--second-color);
+}
+
   .tips .tips-container ul li {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin: 0;
   }
 
   .timer-container .timer .clock {
@@ -809,6 +879,8 @@ header .container .menuToggle {
     left: 0;
     border-radius: 0;
     z-index: 10000000000;
+    margin: 0;
+    height: 70vh;
   }
 
   .about .about-container h2 {
@@ -818,25 +890,19 @@ header .container .menuToggle {
   }
 
   .about .about-container p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 300;
-  }
-
-  .timer-container .timer .buttons button {
-    font-size: 0.8rem;
-    width: 50px;
-    height: 50px;
   }
 
   .timer-container .timer .section button {
     width: 100%;
-    height: 100px;
+    height: 10vh;
     font-size: 2rem;
   }
 
   .timer-container .timer {
-    height: 550px;
-    width: 350px;
+    height: clamp(20vh, 55vh, 45vh);
+    width: clamp(50vw, 60vw, 70vw);
   }
 
   .timer-container .timer .buttons {
@@ -844,19 +910,19 @@ header .container .menuToggle {
   }
 
   .timer-container .timer .buttons button {
-    height: 100px;
-    width: 150px;
-    font-size: 1.5rem;
+    height: 5vh;
+    width: clamp(5vw, 25vw, 20vw);
+    font-size: 1.2rem;
   }
 
   .timer-container .timer .clock {
-    font-size: 7rem;
+    font-size: clamp(2rem, 5rem, 7rem);
     padding: 10px 0px;
   }
 
   .icon-container img {
-    width: 75px;
-    height: 75px;
+    width: 4rem;
+    height: 4rem;
   }
 
   .footer h3 {
@@ -886,9 +952,9 @@ header .container .menuToggle {
   .mobile-navigation {
     position: absolute;
     width: 100%;
-    height: 100%;
-    margin-top: 15px;
+    margin-top: 22px;
     z-index: 10000;
+    display: flex;
     justify-content: center;
     text-align: center;
     background-color: #fff;
@@ -897,21 +963,22 @@ header .container .menuToggle {
 
   .mobile-navigation.active {
     display: flex;
-    height: 90vh;
+    align-items: center;
+    text-align: center;
+    height: 70vh;
   }
 
   .mobile-navigation .container {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 150px;
-    padding-top: 125px;
+    gap: 15px;
   }
 
   .mobile-navigation .container button {
     width: 100%;
     font-size: 50px;
     font-weight: 200px;
-    padding-top: 25px;
     border: none;
     background-color: transparent;
     color: #111;
