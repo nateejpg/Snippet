@@ -1041,6 +1041,7 @@ header .container .menuToggle {
     align-items: center;
     text-align: center;
     top: 8rem;
+    height: 75vh;
     bottom: 8rem;
   }
 
