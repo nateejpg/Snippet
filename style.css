@@ -1030,8 +1030,6 @@ header .container .menuToggle {
     display: flex;
     justify-content: center;
     text-align: center;
-    top: 8rem;
-    bottom: 10rem;
     background-color: #fff;
     display: none;
   }
@@ -1041,7 +1039,7 @@ header .container .menuToggle {
     align-items: center;
     text-align: center;
     top: 8rem;
-    bottom: 4rem;
+    bottom: 8rem;
   }
 
   .mobile-navigation .container {
