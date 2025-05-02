@@ -1041,7 +1041,7 @@ header .container .menuToggle {
     align-items: center;
     text-align: center;
     top: 8rem;
-    bottom: 8rem;
+    bottom: 4rem;
   }
 
   .mobile-navigation .container {
