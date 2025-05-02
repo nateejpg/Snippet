@@ -49,7 +49,6 @@ body {
 header {
   position: relative;
   width: 100%;
-  height: 15vh;
   background-color: var(--standard-color);
 }
 
