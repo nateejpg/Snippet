@@ -645,7 +645,6 @@ footer h3 {
   .login {
     position: absolute;
     width: 100%;
-    top: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
