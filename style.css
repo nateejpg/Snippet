@@ -218,7 +218,7 @@ header .container .menuToggle {
   background-color: var(--fourth-color);
 }
 
-.footer {
+footer {
   width: 100%;
   border-top: 0.2px solid var(--fourth-color);
   display: flex;
@@ -247,7 +247,7 @@ header .container .menuToggle {
   cursor: pointer;
 }
 
-.footer h3 {
+footer h3 {
   font-size: 2rem;
   color: var(--first-color);
 }
@@ -625,9 +625,14 @@ header .container .menuToggle {
 
 @media (max-width: 1300px) {
 
-  html, body {
 
+  .main{
+    background-color: green;
     height: 100%;
+  }
+
+  section {
+    height: auto;
   }
   
   header {
@@ -868,8 +873,6 @@ header .container .menuToggle {
   .about{
     display: block;
     align-items: auto;
-    top: 8rem;
-    bottom: 8rem;
     justify-content: auto;
   }
 
@@ -887,7 +890,7 @@ header .container .menuToggle {
     height: 75vh;
   }
 
-  .footer{
+  footer{
     height: 10rem;
   }
 
@@ -988,7 +991,7 @@ header .container .menuToggle {
     height: 4rem;
   }
 
-  .footer h3 {
+  footer h3 {
     font-size: 1.2rem;
     margin: 0;
   }
@@ -1035,11 +1038,13 @@ header .container .menuToggle {
   }
 
   .mobile-navigation.active {
+    position: absolute;
+    width: 100%;
+    height: 75%;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    top: 8rem;
-    bottom: 8rem;
   }
 
   .mobile-navigation .container {

@@ -23,197 +23,200 @@
       </div>
     </header>
 
-    <section class="about">
-      <div class="about-container" id="abc">
-        <div class="imgBx">
-          <img
-            src="images/reddot.png"
-            onclick="toggle_about(), sound_button()"
-            class="dot"
-          />
-        </div>
-        <h2>What is Snippet?</h2>
+<main>
+  <section class="about">
+    <div class="about-container" id="abc">
+      <div class="imgBx">
+        <img
+          src="images/reddot.png"
+          onclick="toggle_about(), sound_button()"
+          class="dot"
+        />
+      </div>
+      <h2>What is Snippet?</h2>
+      <p>
+        Snippet is a technique developed by me with the purpose to make you do
+        stuff without the usual pain that people feel when they're studying.
+        This method is backed up by a lot of scientific research on the field.
+        it's been tested with people with ADHD and autism and has already been
+        tested with multiple people, just pace yourself and enjoy the time
+        spent.
+      </p>
+    </div>
+  </section>
+
+  <section id="login" class="login">
+    <div class="login-container">
+      <div class="imgBx">
+        <img
+          src="images/reddot.png"
+          onclick="toggle_login(), sound_button()"
+          class="dot"
+        />
+      </div>
+      <h2>Login</h2>
+      <div class="contactBx">
+        <h1>Email</h1>
+        <input
+          type="email"
+          class="email"
+          id="loginEmail"
+          placeholder="Enter your email:"
+        />
+        <h1>Password</h1>
+        <input
+          type="password"
+          name=""
+          class="password"
+          placeholder="Enter your password:"
+          id="loginPassword"
+        />
+        <input
+          type="button"
+          name=""
+          value="Login"
+          class="submit"
+          id="loginSubmit"
+        />
+          <button onclick="toggle_sign(), toggle_login()" class="help">Don't have an account?</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="mobile-navigation" id="toggle">
+    <div class="container">
+      <button onclick="sound_button(), toggle_login()">Login</button>
+      <button onclick="sound_button(), toggle_settings()">Settings</button>
+      <button onclick="sound_button(), toggle_about()">About</button>
+      <button onclick="sound_button(), toggle_tips()">Tips</button>
+    </div>
+  </section>
+
+  <section class="sign">
+    <div class="sign-container">
+      <div class="imgBx">
+        <img
+          src="images/reddot.png"
+          onclick="toggle_sign(), sound_button()"
+          class="dot"
+        />
+      </div>
+      <h2>Register</h2>
+      <div class="content">
+        <h1>Name</h1>
+        <input type="text" placeholder="Enter your name:" id="signName" />
+        <h1>Email</h1>
+        <input
+          type="email"
+          placeholder="Enter your email:"
+          id="signEmail"
+        />
+        <h1>Password</h1>
+        <input
+          type="password"
+          placeholder="Enter your password:"
+          id="signPassword"
+        />
+        <input
+          type="submit"
+          placeholder="submit"
+          id="signSubmit"
+          value="SignUp"
+        />
+        <button onclick="toggle_sign(), toggle_login()" class="help">Already have an account?</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="settings">
+    <div class="settings-container">
+      <div class="imgBx">
+        <img
+          src="images/reddot.png"
+          onclick="toggle_settings(), sound_button()"
+          class="dot"
+        />
+      </div>
+      <h2>Choose Your Timer</h2>
+      <div class="content">
+        <input type="text" id="myinput" value="" onclick="sound_button" />
+      </div>
+      <input type="button" id="checkvalue" value="Enter" ; />
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-container" id="abc">
+      <div class="imgBx">
+        <img
+          src="images/reddot.png"
+          onclick="toggle_settings(), sound_button()"
+          class="dot"
+        />
+      </div>
+      <h2>What is Snippet?</h2>
+      <div class="content">
         <p>
-          Snippet is a technique developed by me with the purpose to make you do
-          stuff without the usual pain that people feel when they're studying.
-          This method is backed up by a lot of scientific research on the field.
-          it's been tested with people with ADHD and autism and has already been
-          tested with multiple people, just pace yourself and enjoy the time
-          spent.
+          Snippet is a technique developed by me with the purpose to make you
+          do stuff without the usual pain that people feel when they're
+          studying. This method is backed up by a lot of scientific research
+          on the field. it's been tested with people with ADHD and autism and
+          has already been tested with multiple people, just pace yourself and
+          enjoy the time spent.
         </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="login" class="login">
-      <div class="login-container">
-        <div class="imgBx">
-          <img
-            src="images/reddot.png"
-            onclick="toggle_login(), sound_button()"
-            class="dot"
-          />
-        </div>
-        <h2>Login</h2>
-        <div class="contactBx">
-          <h1>Email</h1>
-          <input
-            type="email"
-            class="email"
-            id="loginEmail"
-            placeholder="Enter your email:"
-          />
-          <h1>Password</h1>
-          <input
-            type="password"
-            name=""
-            class="password"
-            placeholder="Enter your password:"
-            id="loginPassword"
-          />
-          <input
-            type="button"
-            name=""
-            value="Login"
-            class="submit"
-            id="loginSubmit"
-          />
-            <button onclick="toggle_sign(), toggle_login()" class="help">Don't have an account?</button>
-        </div>
+  <section class="tips">
+    <div class="tips-container">
+      <div class="imgBx">
+        <img
+          src="images/reddot.png"
+          onclick="toggle_tips(), sound_button()"
+          class="dot"
+        />
       </div>
-    </section>
-
-    <section class="mobile-navigation" id="toggle">
-      <div class="container">
-        <button onclick="sound_button(), toggle_login()">Login</button>
-        <button onclick="sound_button(), toggle_settings()">Settings</button>
-        <button onclick="sound_button(), toggle_about()">About</button>
-        <button onclick="sound_button(), toggle_tips()">Tips</button>
+      <h2>Tips</h2>
+      <div class="content">
+        <ul>
+          <li>Choose a task to accomplish during the Snippet.</li>
+          <li>
+            Its strongly recommended to set a timer of 20 minutes, because it
+            is not much time, and also a very sweet spot to work.
+          </li>
+          <li>
+            Dont feel overwhealmed, focus solemly on getting your goal done.
+          </li>
+          <li>
+            Turn off your phone if necessary and all of its notifications.
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="sign">
-      <div class="sign-container">
-        <div class="imgBx">
-          <img
-            src="images/reddot.png"
-            onclick="toggle_sign(), sound_button()"
-            class="dot"
-          />
-        </div>
-        <h2>Register</h2>
-        <div class="content">
-          <h1>Name</h1>
-          <input type="text" placeholder="Enter your name:" id="signName" />
-          <h1>Email</h1>
-          <input
-            type="email"
-            placeholder="Enter your email:"
-            id="signEmail"
-          />
-          <h1>Password</h1>
-          <input
-            type="password"
-            placeholder="Enter your password:"
-            id="signPassword"
-          />
-          <input
-            type="submit"
-            placeholder="submit"
-            id="signSubmit"
-            value="SignUp"
-          />
-          <button onclick="toggle_sign(), toggle_login()" class="help">Already have an account?</button>
-        </div>
+  <section class="timer-container">
+    <div class="timer" id="timer">
+      <div class="section">
+        <button onclick=" sound_button()" id="dark">
+          Dark
+        </button>
+        <button onclick="sound_button()" id="pomo">Pomo</button>
       </div>
-    </section>
-
-    <section class="settings">
-      <div class="settings-container">
-        <div class="imgBx">
-          <img
-            src="images/reddot.png"
-            onclick="toggle_settings(), sound_button()"
-            class="dot"
-          />
-        </div>
-        <h2>Choose Your Timer</h2>
-        <div class="content">
-          <input type="text" id="myinput" value="" onclick="sound_button" />
-        </div>
-        <input type="button" id="checkvalue" value="Enter" ; />
+      <h2 class="clock" id="clock">20:00</h2>
+      <div class="buttons">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="resume">Resume</button>
+        <button id="reset">Reset</button>
       </div>
-    </section>
+    </div>
+  </section>
+  
+</main>
 
-    <section class="about">
-      <div class="about-container" id="abc">
-        <div class="imgBx">
-          <img
-            src="images/reddot.png"
-            onclick="toggle_settings(), sound_button()"
-            class="dot"
-          />
-        </div>
-        <h2>What is Snippet?</h2>
-        <div class="content">
-          <p>
-            Snippet is a technique developed by me with the purpose to make you
-            do stuff without the usual pain that people feel when they're
-            studying. This method is backed up by a lot of scientific research
-            on the field. it's been tested with people with ADHD and autism and
-            has already been tested with multiple people, just pace yourself and
-            enjoy the time spent.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="tips">
-      <div class="tips-container">
-        <div class="imgBx">
-          <img
-            src="images/reddot.png"
-            onclick="toggle_tips(), sound_button()"
-            class="dot"
-          />
-        </div>
-        <h2>Tips</h2>
-        <div class="content">
-          <ul>
-            <li>Choose a task to accomplish during the Snippet.</li>
-            <li>
-              Its strongly recommended to set a timer of 20 minutes, because it
-              is not much time, and also a very sweet spot to work.
-            </li>
-            <li>
-              Dont feel overwhealmed, focus solemly on getting your goal done.
-            </li>
-            <li>
-              Turn off your phone if necessary and all of its notifications.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="timer-container">
-      <div class="timer" id="timer">
-        <div class="section">
-          <button onclick=" sound_button()" id="dark">
-            Dark
-          </button>
-          <button onclick="sound_button()" id="pomo">Pomo</button>
-        </div>
-        <h2 class="clock" id="clock">20:00</h2>
-        <div class="buttons">
-          <button id="start">Start</button>
-          <button id="stop">Stop</button>
-          <button id="resume">Resume</button>
-          <button id="reset">Reset</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="footer">
+    <footer>
       <div class="icon-container">
         <a href="https://snapshot42.netlify.app/"
           ><img src="images/paper.png" onclick="sound_button()"
@@ -226,7 +229,7 @@
         /></a>
       </div>
       <h3>Designed and Developed by Natejpg</h3>
-    </section>
+    </footer>
     <script src="script.js"></script>
     <script type="module">
       // Import the functions you need from the SDKs you need
