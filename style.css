@@ -557,18 +557,6 @@ footer h3 {
   background-color: transparent;
 }
 
-.login-container button:hover {
-  color: #00308f;
-  border-bottom: 1px #00308f solid;
-  cursor: pointer;
-}
-
-.sign-container button:hover {
-  color: #00308f;
-  border-bottom: 1px #00308f solid;
-  cursor: pointer;
-}
-
 .tips {
   position: absolute;
   width: 100%;
@@ -645,6 +633,7 @@ footer h3 {
   .login {
     position: absolute;
     width: 100%;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -876,7 +865,7 @@ footer h3 {
 
   .about .about-container.active {
     display: block;
-    max-width: 100%;
+    width: 100%;
     left: 0;
     border-radius: 0;
     z-index: 10000000000;
@@ -941,12 +930,13 @@ footer h3 {
 
   .about .about-container h2 {
     font-size: 3rem;
-    padding-top: 0;
+    padding-top: 1.5rem;
     padding-bottom: 25px;
   }
 
   .about .about-container p {
     font-size: 1.1rem;
+    padding: 30px;
     font-weight: 300;
   }
 
@@ -973,7 +963,7 @@ footer h3 {
 
   .timer-container .timer .clock {
     font-size: clamp(2rem, 6rem, 7rem);
-    padding: 10px 0px;
+    padding: 20px 0px;
   }
 
   .icon-container img {
@@ -989,7 +979,7 @@ footer h3 {
   header .container {
     display: flex;
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     text-align: center;
     justify-content: space-between;
     align-items: center;
