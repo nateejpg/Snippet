@@ -236,6 +236,7 @@ footer {
   position: relative;
   width: 100%;
   display: flex;
+  padding-top: 5px;
   align-items: center;
   justify-content: center;
 }
@@ -965,10 +966,6 @@ footer h3 {
   .timer-container .timer .clock {
     font-size: clamp(2rem, 6rem, 7rem);
     padding: 20px 0px;
-  }
-
-  .icon-container {
-    padding-top: 5px;
   }
 
   .icon-container img {
