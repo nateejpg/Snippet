@@ -153,6 +153,7 @@ header .container .menuToggle {
   background-color: var(--third-color);
   height: 550px;
   width: 700px;
+  padding: 0px 10px;
   border-radius: 1rem;
 }
 
@@ -964,6 +965,10 @@ footer h3 {
   .timer-container .timer .clock {
     font-size: clamp(2rem, 6rem, 7rem);
     padding: 20px 0px;
+  }
+
+  .icon-container {
+    padding-top: 5px;
   }
 
   .icon-container img {
