@@ -189,11 +189,11 @@ header .container .menuToggle {
 }
 
 .timer-container .timer .clock {
-  font-size: 17rem;
-  color: var(--fourth-color);
-  margin: 0;
-  padding: 5px;
-  max-width: 100%;
+    font-size: 16rem;
+    color: var(--fourth-color);
+    margin: 0;
+    padding: 3% 0;
+    max-width: 100%;
 }
 
 .timer-container .timer .buttons {
@@ -950,7 +950,7 @@ footer h3 {
 
   .timer-container .timer {
     height: clamp(20vh, 60vh, 65vh);
-    width: clamp(50vw, 70vw, 80vw);
+    width: clamp(50vw, 80vw, 80vw);
   }
 
   .timer-container .timer .buttons {
