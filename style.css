@@ -630,6 +630,7 @@ footer h3 {
     position: relative;
     display: flex;
     justify-content: space-between;
+    height: 15%;
   }
 
   .login {
@@ -902,7 +903,7 @@ footer h3 {
 
   .timer-container{
 
-    height: 70vh;
+    height: 65vh;
   }
 
   .timer-container .timer .clock {
@@ -971,6 +972,11 @@ footer h3 {
   .icon-container img {
     width: 4rem;
     height: 4rem;
+  }
+
+  footer{
+    height: 15%;
+    padding: 0px;
   }
 
   footer h3 {
