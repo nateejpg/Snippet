@@ -606,11 +606,13 @@ footer h3 {
 
 @media (max-width: 1300px) {
 
+  body{
+    height: 100vh;
+  }
 
-  .main{
-    background-color: green;
-    height: 100%;
-    flex: 1;
+
+  main{
+    display: flex;
   }
 
   section {
@@ -621,7 +623,6 @@ footer h3 {
     position: relative;
     display: flex;
     justify-content: space-between;
-    background-color: rebeccapurple;
     height: 10vh;
   }
 
@@ -894,9 +895,9 @@ footer h3 {
     margin: 0;
   }
 
-  .timer-container{
-    flex: 1;
-  }
+  .timer-container {
+    height: 75vh;
+}
 
   .timer-container .timer .clock {
     font-size: 7rem;
@@ -1019,7 +1020,7 @@ footer h3 {
   .mobile-navigation.active {
     position: absolute;
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
