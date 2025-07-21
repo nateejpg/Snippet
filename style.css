@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  background-color: var(--standard-color);
+ background-color: var(--standard-color); 
 
 }
 
@@ -46,7 +46,7 @@
 
 header {
   position: relative;
-  height: 10%;
+  height: 15vh;
   width: 100%;
 }
 
@@ -134,9 +134,8 @@ header .container .menuToggle {
 .timer-container {
   position: relative;
   width: 100%;
-  background-color: var(--standard-color);
   display: flex;
-  height: 75vh;
+  height: 70vh;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -216,14 +215,13 @@ header .container .menuToggle {
 
 footer {
   width: 100%;
-  height: 10vh;
+  height: 15vh;
   border-top: 0.2px solid var(--fourth-color);
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;  
   text-align: center;
-  background-color: var(--standard-color);
 }
 
 .icon-container {
@@ -969,9 +967,8 @@ footer h3 {
   }
 
   footer{
-    height: 12vh;
+    height: 15vh;
     padding: 0px;
-    background-color: green;
   }
 
   footer h3 {
