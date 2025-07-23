@@ -471,11 +471,11 @@ footer h3 {
   width: 50rem;
   height: 50rem;
   border-radius: 1rem;
-  top: -200%;
+  left: -300%;
 }
 
 .login .login-container.active {
-  top: 0;
+  left: 0;
 }
 
 .login-container h2 {
@@ -629,7 +629,7 @@ footer h3 {
   .login {
     position: absolute;
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -642,64 +642,18 @@ footer h3 {
 
   .login .login-container {
     position: relative;
+    display: none;
     text-align: center;
     transition: 0.7s;
     background-color: var(--first-color);
-    margin-top: 60px;
     width: 50rem;
     height: 50rem;
-    display: none;
     z-index: 10000;
     border-radius: 1rem;
+    
   }
 
   .login .login-container.active {
-    z-index: 100000000000000000;
-    padding: 0;
-    border-radius: 0;
-    width: 100%;
-    margin: 0;
-    height: 70vh;
-    padding-top: 10%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .login .login-container .contactBx {
-    position: relative;
-    margin: 0px 50px;
-    gap: 13px;
-    display: grid;
-    height: 200px;
-  }
-
-  .login-container h1 {
-    margin: 10px 0px;
-}
-
-  .login .login-container button {
-    font-size: 1.3rem;
-    margin: 0;
-  }
-
-  .login-container h2 {
-    font-size: 3rem;
-    color: var(--second-color);
-    padding: 0;
-  }
-
-  .imgBx{
-    padding: 0;
-  }
-
-  .imgBx img {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
-  .sign .sign-container.active {
     z-index: 10000000;
     display: flex;
     flex-direction: column;
@@ -707,7 +661,69 @@ footer h3 {
     border-radius: 0;
     width: 100%;
     margin: 0;
-    height: 70vh;
+    height: 75vh;
+    
+  }
+
+    .sign .sign-container.active {
+    z-index: 10000000;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+    height: 75vh;
+}
+
+  .sign .sign-container {
+    position: relative;
+    display: none;
+    text-align: center;
+    transition: 0.7s;
+    background-color: var(--first-color);
+    width: 50rem;
+    height: 50rem;
+    z-index: 10000;
+    border-radius: 1rem;
+  }
+
+  .login .login-container .contactBx {
+    position: relative;
+    gap: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .login-container h1 {
+    margin: 0px;
+    font-size: 2rem;
+    height: 0;
+}
+
+  .login .login-container button {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .login-container h2 {
+    font-size: 3rem;
+    color: var(--second-color);
+  }
+
+  .imgBx{
+    padding: 0;
+    position: fixed;
+
+  }
+
+  .imgBx img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .sign-container .content h1 {
@@ -724,10 +740,12 @@ footer h3 {
 
 .sign-container .content input[type="email"] {
   height: 20px;
+  width: 80%;
 }
 
 .sign-container .content input[type="password"] {
   height: 20px;
+  width: 80%;
 }
 
 .sign-container .content input[type="submit"]:hover {
@@ -739,23 +757,15 @@ footer h3 {
     font-size: 3rem;
   }
 
-  .sign .sign-container {
-    position: relative;
-    display: none;
-    text-align: center;
-    transition: 0.7s;
-    background-color: var(--first-color);
-    margin-top: 60px;
-    width: 50rem;
-    height: 50rem;
-    z-index: 10000;
-    border-radius: 1rem;
-  }
-
   .sign-container .content {
     position: relative;
     gap: 13px;
-    display: grid;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
     margin: 0;
     height: 200px;
   }
@@ -763,7 +773,7 @@ footer h3 {
 
   .sign-container .content input[type="text"] {
     height: 20px;
-    width: 100%;
+    width: 80%;
     border: none;
     border-bottom: 1px solid var(--second-color);
     outline: none;
@@ -771,16 +781,18 @@ footer h3 {
 
 .sign-container .content input[type="submit"]{
     border-radius: 1rem;
-    width: 100%;
-    height: 40px; 
+    width: 30%;
+    height: 50%; 
     margin: 0px;
     background-color: #32de84;
     cursor: pointer;
     border: none;
+    padding: 15px 0px;
 }
 
 .contactBx input[type="button"] {
   border-radius: 1rem;
+  width: 50%;
   background-color: #32de84;
   cursor: pointer;
   border: none;
@@ -800,7 +812,7 @@ footer h3 {
     z-index: 10000000;
     border-radius: 0;
     margin: 0;
-    height: 70vh;
+    height: 75vh;
   }
 
   header .container .header-buttons {
@@ -867,7 +879,7 @@ footer h3 {
     border-radius: 0;
     z-index: 10000000000;
     margin: 0;
-    height: 70vh;
+    height: 75vh;
   }
 
   .tips .tips-container{
@@ -882,7 +894,7 @@ footer h3 {
     z-index: 10000000;
     margin: 0;
     gap: 0;
-    height: 70vh;
+    height: 75vh;
   }
 
   .tips-container h2 {
@@ -943,8 +955,8 @@ footer h3 {
   }
 
   .timer-container .timer {
-    height: clamp(20vh, 60vh, 65vh);
-    width: clamp(50vw, 80vw, 80vw);
+    height: 60vh;
+    width: 80vw;
   }
 
   .timer-container .timer .buttons {
