@@ -22,28 +22,7 @@
         <div class="menuToggle" onclick="toggle_menu()"></div>
       </div>
     </header>
-
 <main>
-  <section class="about">
-    <div class="about-container" id="abc">
-      <div class="imgBx">
-        <img
-          src="images/reddot.png"
-          onclick="toggle_about(), sound_button()"
-          class="dot"
-        />
-      </div>
-      <h2>What is Snippet?</h2>
-      <p>
-        Snippet is a technique developed by me with the purpose to make you do
-        stuff without the usual pain that people feel when they're studying.
-        This method is backed up by a lot of scientific research on the field.
-        it's been tested with people with ADHD and autism and has already been
-        tested with multiple people, just pace yourself and enjoy the time
-        spent.
-      </p>
-    </div>
-  </section>
 
   <section id="login" class="login">
     <div class="login-container">
@@ -54,8 +33,8 @@
           class="dot"
         />
       </div>
-      <h2>Login</h2>
-      <div class="contactBx">
+      <div class="contactBxLogin">
+        <h2>Login</h2>
         <h1>Email</h1>
         <input
           type="email"
@@ -101,8 +80,8 @@
           class="dot"
         />
       </div>
-      <h2>Register</h2>
-      <div class="content">
+      <div class="contactBx">
+        <h2>Register</h2>
         <h1>Name</h1>
         <input type="text" placeholder="Enter your name:" id="signName" />
         <h1>Email</h1>
@@ -137,11 +116,11 @@
           class="dot"
         />
       </div>
-      <h2>Choose Your Timer</h2>
       <div class="content">
+        <h2>Choose Your Timer</h2>
         <input type="text" id="myinput" value="" onclick="sound_button" />
+        <input type="button" id="checkvalue" value="Enter" ; />
       </div>
-      <input type="button" id="checkvalue" value="Enter" ; />
     </div>
   </section>
 
@@ -150,12 +129,12 @@
       <div class="imgBx">
         <img
           src="images/reddot.png"
-          onclick="toggle_settings(), sound_button()"
+          onclick="toggle_about(), sound_button()"
           class="dot"
         />
       </div>
-      <h2>What is Snippet?</h2>
       <div class="content">
+        <h2>What is Snippet?</h2>
         <p>
           Snippet is a technique developed by me with the purpose to make you
           do stuff without the usual pain that people feel when they're
@@ -177,8 +156,8 @@
           class="dot"
         />
       </div>
-      <h2>Tips</h2>
       <div class="content">
+        <h2>Tips</h2>
         <ul>
           <li>Choose a task to accomplish during the Snippet.</li>
           <li>
